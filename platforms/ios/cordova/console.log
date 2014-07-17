@@ -32,3 +32,102 @@
 2014-07-15 02:10:48.989 drop[22315:70b] [CDVTimer][TotalPluginStartup] 1.228988ms
 2014-07-15 02:10:50.050 drop[22315:70b] Resetting plugins due to page load.
 2014-07-15 02:10:50.335 drop[22315:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-15 18:56:24.671 drop[23508:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 18:56:24.895 drop[23508:70b] Unlimited access to network resources
+2014-07-15 18:56:25.997 drop[23508:70b] [CDVTimer][keyboard] 0.098944ms
+2014-07-15 18:56:25.998 drop[23508:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 18:56:25.998 drop[23508:70b] [CDVTimer][statusbar] 0.582993ms
+2014-07-15 18:56:25.999 drop[23508:70b] [CDVTimer][TotalPluginStartup] 1.893997ms
+2014-07-15 18:56:27.765 drop[23508:70b] Resetting plugins due to page load.
+2014-07-15 18:56:28.894 drop[23508:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-15 20:00:29.573 drop[23938:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 20:00:29.641 drop[23938:70b] Unlimited access to network resources
+2014-07-15 20:00:29.684 drop[23938:70b] [CDVTimer][keyboard] 0.061989ms
+2014-07-15 20:00:29.684 drop[23938:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 20:00:29.684 drop[23938:70b] [CDVTimer][statusbar] 0.348985ms
+2014-07-15 20:00:29.685 drop[23938:70b] [CDVTimer][TotalPluginStartup] 1.205981ms
+2014-07-15 20:00:31.000 drop[23938:70b] Resetting plugins due to page load.
+2014-07-15 20:00:31.492 drop[23938:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-15 22:37:09.210 drop[23938:70b] Doing login [object Object]
+2014-07-15 22:37:09.301 drop[23938:70b] THREAD WARNING: ['Console'] took '91.165039' ms. Plugin should use a background thread.
+2014-07-16 00:22:05.160 drop[24452:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 00:22:05.405 drop[24452:70b] Unlimited access to network resources
+2014-07-16 00:22:06.961 drop[24452:70b] [CDVTimer][keyboard] 28.764009ms
+2014-07-16 00:22:06.963 drop[24452:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 00:22:06.964 drop[24452:70b] [CDVTimer][statusbar] 1.019001ms
+2014-07-16 00:22:06.965 drop[24452:70b] [CDVTimer][TotalPluginStartup] 31.934977ms
+2014-07-16 00:22:09.860 drop[24452:70b] Resetting plugins due to page load.
+2014-07-16 00:22:11.102 drop[24452:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 00:25:21.846 drop[24788:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 00:25:21.855 drop[24788:70b] Unlimited access to network resources
+2014-07-16 00:25:21.885 drop[24788:70b] [CDVTimer][keyboard] 0.065029ms
+2014-07-16 00:25:21.886 drop[24788:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 00:25:21.886 drop[24788:70b] [CDVTimer][statusbar] 0.366032ms
+2014-07-16 00:25:21.887 drop[24788:70b] [CDVTimer][TotalPluginStartup] 1.176000ms
+2014-07-16 00:25:22.400 drop[24788:70b] Resetting plugins due to page load.
+2014-07-16 00:25:22.555 drop[24788:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 00:56:17.433 drop[25540:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 00:56:17.479 drop[25540:70b] Unlimited access to network resources
+2014-07-16 00:56:17.512 drop[25540:70b] [CDVTimer][keyboard] 0.059962ms
+2014-07-16 00:56:17.513 drop[25540:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 00:56:17.513 drop[25540:70b] [CDVTimer][statusbar] 0.364959ms
+2014-07-16 00:56:17.514 drop[25540:70b] [CDVTimer][TotalPluginStartup] 1.203001ms
+2014-07-16 00:56:18.667 drop[25540:70b] Resetting plugins due to page load.
+2014-07-16 00:56:19.079 drop[25540:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 01:01:33.124 drop[25540:70b] Received memory warning.
+2014-07-16 01:03:45.816 drop[25879:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 01:03:45.855 drop[25879:70b] Unlimited access to network resources
+2014-07-16 01:03:45.895 drop[25879:70b] [CDVTimer][keyboard] 0.059009ms
+2014-07-16 01:03:45.895 drop[25879:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 01:03:45.896 drop[25879:70b] [CDVTimer][statusbar] 0.378013ms
+2014-07-16 01:03:45.896 drop[25879:70b] [CDVTimer][TotalPluginStartup] 1.215041ms
+2014-07-16 01:03:47.075 drop[25879:70b] Resetting plugins due to page load.
+2014-07-16 01:03:47.416 drop[25879:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 01:31:45.086 drop[26926:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 01:31:45.334 drop[26926:70b] Unlimited access to network resources
+2014-07-16 01:31:46.716 drop[26926:70b] [CDVTimer][keyboard] 10.846972ms
+2014-07-16 01:31:46.718 drop[26926:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 01:31:46.719 drop[26926:70b] [CDVTimer][statusbar] 1.076996ms
+2014-07-16 01:31:46.719 drop[26926:70b] [CDVTimer][TotalPluginStartup] 14.068007ms
+2014-07-16 01:31:48.543 drop[26926:70b] Resetting plugins due to page load.
+2014-07-16 01:31:50.064 drop[26926:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 01:51:54.490 drop[27508:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 01:51:54.683 drop[27508:70b] Unlimited access to network resources
+2014-07-16 01:51:55.799 drop[27508:70b] [CDVTimer][keyboard] 9.574056ms
+2014-07-16 01:51:55.800 drop[27508:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 01:51:55.801 drop[27508:70b] [CDVTimer][statusbar] 1.003027ms
+2014-07-16 01:51:55.802 drop[27508:70b] [CDVTimer][TotalPluginStartup] 12.767017ms
+2014-07-16 01:51:57.398 drop[27508:70b] Resetting plugins due to page load.
+2014-07-16 01:51:58.637 drop[27508:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 01:54:27.289 drop[27726:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 01:54:27.349 drop[27726:70b] Unlimited access to network resources
+2014-07-16 01:54:27.400 drop[27726:70b] [CDVTimer][keyboard] 0.057995ms
+2014-07-16 01:54:27.401 drop[27726:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 01:54:27.401 drop[27726:70b] [CDVTimer][statusbar] 0.378013ms
+2014-07-16 01:54:27.401 drop[27726:70b] [CDVTimer][TotalPluginStartup] 1.183987ms
+2014-07-16 01:54:28.782 drop[27726:70b] Resetting plugins due to page load.
+2014-07-16 01:54:29.220 drop[27726:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 02:02:00.275 drop[28192:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 02:02:00.519 drop[28192:70b] Unlimited access to network resources
+2014-07-16 02:02:01.217 drop[28192:70b] [CDVTimer][keyboard] 14.690042ms
+2014-07-16 02:02:01.217 drop[28192:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 02:02:01.218 drop[28192:70b] [CDVTimer][statusbar] 0.376999ms
+2014-07-16 02:02:01.218 drop[28192:70b] [CDVTimer][TotalPluginStartup] 15.905023ms
+2014-07-16 02:02:02.966 drop[28192:70b] Resetting plugins due to page load.
+2014-07-16 02:02:04.187 drop[28192:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/playlists
+2014-07-16 16:39:24.946 drop[33390:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 16:39:25.228 drop[33390:70b] Unlimited access to network resources
+2014-07-16 16:39:26.344 drop[33390:70b] [CDVTimer][keyboard] 10.744035ms
+2014-07-16 16:39:26.345 drop[33390:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 16:39:26.346 drop[33390:70b] [CDVTimer][statusbar] 1.082003ms
+2014-07-16 16:39:26.347 drop[33390:70b] [CDVTimer][TotalPluginStartup] 13.966024ms
+2014-07-16 16:39:28.205 drop[33390:70b] Resetting plugins due to page load.
+2014-07-16 16:39:29.417 drop[33390:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-16 22:04:20.189 drop[35843:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 22:04:20.505 drop[35843:70b] Unlimited access to network resources
+2014-07-16 22:04:21.953 drop[35843:70b] [CDVTimer][keyboard] 27.889967ms
+2014-07-16 22:04:21.955 drop[35843:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-16 22:04:21.956 drop[35843:70b] [CDVTimer][statusbar] 1.058042ms
+2014-07-16 22:04:21.956 drop[35843:70b] [CDVTimer][TotalPluginStartup] 31.100035ms
+2014-07-16 22:04:23.760 drop[35843:70b] Resetting plugins due to page load.
+2014-07-16 22:04:25.455 drop[35843:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop

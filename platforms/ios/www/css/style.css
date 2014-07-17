@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+.headLogo{
+	margin-top: 7px;
+}
+
+.scroll-content{
+	background-color: #353535;
+}
+
+.bar-dark{
+	background-color: #232323;
+}
+
+hr{
+	border: 1px solid #4f4f4f;
+}
+

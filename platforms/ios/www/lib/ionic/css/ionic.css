@@ -2501,7 +2501,7 @@ cite {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: #ffffff;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.2; }
@@ -2584,7 +2584,7 @@ address {
 
 a.subdued {
   padding-right: 10px;
-  color: #888;
+  color: #0086e4;
   text-decoration: none; }
   a.subdued:hover {
     text-decoration: none; }
@@ -2712,10 +2712,10 @@ a.subdued {
   padding: 5px;
   width: 100%;
   height: 44px;
-  border-width: 0;
+  /*border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;*/
   background-color: white;
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
@@ -2815,10 +2815,11 @@ a.subdued {
     .bar.bar-royal.bar-footer {
       background-image: linear-gradient(180deg, #552bdf, #552bdf 50%, transparent 50%); }
   .bar.bar-dark {
+  	background-color: #232323;
     border-color: #111;
-    background-color: #444444;
     background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
-    color: #fff; }
+    color: #fff; 
+	-webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
     .bar.bar-dark .title {
       color: #fff; }
     .bar.bar-dark.bar-footer {
@@ -3064,13 +3065,13 @@ a.subdued {
 .bar-dark .button {
   border-color: #111;
   background-color: #444444;
-  color: #fff; }
+  color: #0086E4; }
   .bar-dark .button:hover {
     color: #fff;
     text-decoration: none; }
   .bar-dark .button.active, .bar-dark .button.activated {
     border-color: #000;
-    background-color: #262626;
+    background-color: #52BDFF;
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15); }
   .bar-dark .button.button-clear {
     border-color: transparent;
@@ -3660,16 +3661,16 @@ a.subdued {
  * --------------------------------------------------
  */
 .item {
-  border-color: #ddd;
-  background-color: #fff;
-  color: #444;
+  /*border-color: #ddd;*/
+  background-color: #232323;
+  color: #ffffff;
   position: relative;
   z-index: 2;
   display: block;
   margin: -1px;
   padding: 15px;
-  border-width: 1px;
-  border-style: solid;
+  /*border-width: 1px;
+  border-style: solid;*/
   font-size: 16px; }
   .item h2 {
     margin: 0 0 4px 0;
@@ -3744,8 +3745,8 @@ a.subdued {
     cursor: pointer; }
 
 .item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {
-  border-color: #ccc;
-  background-color: #D9D9D9; }
+  /*border-color: #ccc ;*/
+  background-color: #0086E4; }
   .item.active.item-light, .item.activated.item-light, .item-complex.active .item-content.item-light, .item-complex.activated .item-content.item-light, .item .item-content.active.item-light, .item .item-content.activated.item-light {
     border-color: #ccc;
     background-color: #fafafa; }
@@ -3780,7 +3781,6 @@ a.subdued {
   white-space: nowrap; }
 
 a.item {
-  color: inherit;
   text-decoration: none; }
   a.item:hover, a.item:focus {
     text-decoration: none; }
@@ -3802,7 +3802,7 @@ a.item {
   z-index: 2;
   padding: 15px 45px 15px 15px;
   border: none;
-  background-color: white; }
+  background-color: #232323; }
 
 a.item-content {
   display: block;
@@ -7177,3 +7177,7 @@ a.button {
 .platform-c:not(.enable-transitions) * {
   -webkit-transition: none !important;
   transition: none !important; }
+
+
+
+
