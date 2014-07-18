@@ -1,0 +1,61 @@
+<!-- Ion View and Header logo -->
+<ion-view title="<img class='headLogo' src='img/drop_head_logo.svg'>">
+
+  <!-- Toggle Menu Left -->
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <!-- Drop Camera -->
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios7-videocam"></button>
+  </ion-nav-buttons>
+   
+  <!-- Drop Feed -->
+  <ion-content class="has-header">
+    
+    <div class="list card dropcard" ng-repeat="drop in drops">
+    <!-- Drop username & location -->
+      <div class="item item-avatar" >
+        <img src="mcfly.jpg">
+        <h2>{{drop.username}}</h2>
+        <p>Uploaded a Drop</p>
+         <p>{{drop.location}}</p>
+      </div>
+
+      <!-- Drop video, trick, feature, likes -->
+      <div class="item item-body">
+         
+      
+      <video controls width="100%" height="">
+        <source src="vids/openingwkend.mp4" type='video/mp4' />
+      </video> 
+    
+        <p>
+          <a href="#" class="subdued trick">{{drop.trick_ex}}</a> - On -  
+          <a href="#" class="subdued feature">{{drop.park_feature}}</a>
+        </p>
+        <hr>
+        <p>
+          <a href="#" class="subdued">19 people thinks this is Rad</a>
+        </p>
+      </div>
+
+      <!-- Rad tabs ( Like, Share ) -->
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Rad
+        </a>
+        
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+
+    </div><!--  / list card -->
+  </ion-content>
+</ion-view>
+
+

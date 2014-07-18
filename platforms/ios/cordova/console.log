@@ -131,3 +131,30 @@
 2014-07-16 22:04:21.956 drop[35843:70b] [CDVTimer][TotalPluginStartup] 31.100035ms
 2014-07-16 22:04:23.760 drop[35843:70b] Resetting plugins due to page load.
 2014-07-16 22:04:25.455 drop[35843:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-17 22:17:35.138 drop[45121:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-17 22:17:36.305 drop[45121:70b] Unlimited access to network resources
+2014-07-17 22:17:42.226 drop[45121:70b] [CDVTimer][keyboard] 64.315021ms
+2014-07-17 22:17:42.227 drop[45121:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-17 22:17:42.227 drop[45121:70b] [CDVTimer][statusbar] 0.378013ms
+2014-07-17 22:17:42.227 drop[45121:70b] [CDVTimer][TotalPluginStartup] 65.581024ms
+2014-07-17 22:17:43.819 drop[45121:70b] Resetting plugins due to page load.
+2014-07-17 22:17:45.739 drop[45121:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-17 22:21:07.494 drop[45121:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:21:08.683 drop[45121:7c27] 22:21:08.639 WARNING:   128: The default input device's sample rate was changed.
+2014-07-17 22:21:09.655 drop[45121:620f] 22:21:09.655 WARNING:   245: Audio device's sample rate changed. You may need to restart the simulator.
+2014-07-17 22:21:09.656 drop[45121:620f] 22:21:09.656 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-17 22:21:09.657 drop[45121:7213] 22:21:09.657 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-17 22:21:49.465 drop[45121:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:22:42.330 drop[45121:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:29:54.188 drop[45653:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-17 22:29:55.135 drop[45653:70b] Unlimited access to network resources
+2014-07-17 22:29:56.381 drop[45653:70b] [CDVTimer][keyboard] 0.060976ms
+2014-07-17 22:29:56.382 drop[45653:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-17 22:29:56.382 drop[45653:70b] [CDVTimer][statusbar] 0.414968ms
+2014-07-17 22:29:56.383 drop[45653:70b] [CDVTimer][TotalPluginStartup] 1.298964ms
+2014-07-17 22:29:57.959 drop[45653:70b] Resetting plugins due to page load.
+2014-07-17 22:29:58.984 drop[45653:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-17 22:30:09.083 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:30:28.187 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:30:58.751 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-17 22:31:17.552 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
