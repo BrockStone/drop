@@ -158,3 +158,76 @@
 2014-07-17 22:30:28.187 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
 2014-07-17 22:30:58.751 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
 2014-07-17 22:31:17.552 drop[45653:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 00:04:47.512 drop[47129:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-18 00:04:47.753 drop[47129:70b] Unlimited access to network resources
+2014-07-18 00:04:49.133 drop[47129:70b] [CDVTimer][keyboard] 17.522991ms
+2014-07-18 00:04:49.135 drop[47129:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-18 00:04:49.136 drop[47129:70b] [CDVTimer][statusbar] 0.995994ms
+2014-07-18 00:04:49.136 drop[47129:70b] [CDVTimer][TotalPluginStartup] 20.805001ms
+2014-07-18 00:04:51.386 drop[47129:70b] Resetting plugins due to page load.
+2014-07-18 00:04:53.180 drop[47129:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-18 00:05:05.655 drop[47129:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 03:46:17.290 drop[47129:1021f] 03:46:17.170 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 03:46:18.594 drop[47129:1021f] 03:46:18.594 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 03:46:19.064 drop[47129:5f27] 03:46:19.064 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 03:47:39.314 drop[47129:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 03:48:33.741 drop[47129:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 04:14:50.745 drop[47129:ca0b] 04:14:50.744 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:09.344 drop[47129:ca17] 04:16:08.971 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:14.488 drop[47129:ca17] 04:16:14.488 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:14.488 drop[47129:ca17] 04:16:14.488 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:14.489 drop[47129:ca17] 04:16:14.489 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:15.971 drop[47129:10243] 04:16:15.971 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:15.973 drop[47129:e713] 04:16:15.973 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:15.977 drop[47129:ca17] 04:16:15.976 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:40.550 drop[47129:624f] 04:16:40.550 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:16:57.251 drop[47129:e573] 04:16:57.251 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 04:17:27.111 drop[47129:65b7] 04:17:27.111 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:01.968 drop[47129:e583] 14:46:01.968 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:02.572 drop[47129:e583] 14:46:02.572 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:02.646 drop[47129:e583] 14:46:02.646 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:02.651 drop[47129:e583] 14:46:02.651 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:02.654 drop[47129:e583] 14:46:02.654 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:46.463 drop[47129:e58b] 14:46:46.463 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 14:46:47.880 drop[47129:e58b] 14:46:47.880 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 16:34:36.975 drop[47129:df23] 16:34:36.873 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 16:34:38.229 drop[47129:df23] 16:34:38.229 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 16:59:33.694 drop[47129:654f] 16:59:33.423 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 16:59:33.695 drop[47129:654f] 16:59:33.695 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 16:59:37.275 drop[47129:eb2b] 16:59:37.275 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 17:12:56.886 drop[47129:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 17:13:08.344 drop[47129:b547] 17:13:08.344 ERROR:     >aq> 1605: failed (-66674); will stop (4096/6080 frames)
+2014-07-18 17:13:53.995 drop[51471:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-18 17:13:54.206 drop[51471:70b] Unlimited access to network resources
+2014-07-18 17:13:55.648 drop[51471:70b] [CDVTimer][keyboard] 23.896039ms
+2014-07-18 17:13:55.649 drop[51471:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-18 17:13:55.650 drop[51471:70b] [CDVTimer][statusbar] 0.741005ms
+2014-07-18 17:13:55.650 drop[51471:70b] [CDVTimer][TotalPluginStartup] 26.157022ms
+2014-07-18 17:13:57.433 drop[51471:70b] Resetting plugins due to page load.
+2014-07-18 17:13:58.529 drop[51471:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-18 18:17:15.342 drop[52229:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-18 18:17:15.610 drop[52229:70b] Unlimited access to network resources
+2014-07-18 18:17:17.215 drop[52229:70b] [CDVTimer][keyboard] 8.157015ms
+2014-07-18 18:17:17.216 drop[52229:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-18 18:17:17.216 drop[52229:70b] [CDVTimer][statusbar] 0.388026ms
+2014-07-18 18:17:17.217 drop[52229:70b] [CDVTimer][TotalPluginStartup] 9.595037ms
+2014-07-18 18:17:18.948 drop[52229:70b] Resetting plugins due to page load.
+2014-07-18 18:17:19.840 drop[52229:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-07-18 18:17:41.518 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:17:59.783 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:18:06.017 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:20:46.085 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:22:25.837 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:22:34.255 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 18:22:40.943 drop[52229:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-07-18 19:02:41.965 drop[52229:7303] 19:02:41.868 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 22:33:05.520 drop[52229:1093f] 22:33:05.520 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 22:33:05.553 drop[52229:83d3] 22:33:05.553 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 22:33:28.281 drop[52229:10947] 22:33:28.281 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 22:33:30.423 drop[52229:10947] 22:33:30.423 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 22:33:34.082 drop[52229:10f7f] 22:33:34.082 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 23:04:08.614 drop[52229:1073b] 23:04:08.598 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 23:27:29.520 drop[52229:1282f] 23:27:29.520 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 23:27:29.552 drop[52229:6cd7] 23:27:29.552 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 23:27:52.066 drop[52229:6cdb] 23:27:51.960 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-18 23:27:54.429 drop[52229:6cdb] 23:27:54.429 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.

@@ -5,7 +5,7 @@ angular.module('drop.controllers', [])
   $scope.loginData = {};
 
   // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
+  $ionicModal.fromTemplateUrl('templates/log.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
@@ -33,12 +33,22 @@ angular.module('drop.controllers', [])
   };
 })
 
+// Drop Home Scope Controller (Username, id, trick, feature, video, location)
 .controller('dropsCtrl', function($scope) {
   $scope.drops = [
     { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
     { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
     { username: 'Skip', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
     { username: 'DJ_Rel', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'}
+  ];
+})
+
+.controller('loveCtrl', function($scope) {
+  $scope.loves = [
+    { username: 'Brock_Sewdmwklmetone'},
+    { username: 'JeffSmail'},
+    { username: 'Skip'},
+    { username: 'DJ_Rel'}
   ];
 })
 

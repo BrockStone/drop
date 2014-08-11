@@ -30,11 +30,12 @@ angular.module('drop', ['ionic', 'drop.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: "/search",
+    .state('app.love', {
+      url: "/love",
       views: {
         'menuContent' :{
-          templateUrl: "templates/search.html"
+          templateUrl: "templates/love.html",
+          controller: 'loveCtrl'
         }
       }
     })

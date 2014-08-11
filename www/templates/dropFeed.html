@@ -24,40 +24,43 @@
       </div>
 
       <!-- Drop video, trick, feature, likes -->
-      <div class="item item-body">
-         
-      
-      <video controls width="100%" height="">
+       <video class="full-image" controls width="100%">
         <source src="{{drop.vid_url}}" type='video/mp4' />
-      </video> 
-    
-       <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" href="#">
-          {{drop.trick_ex}}
-        </a>
-        <p style="margin-top:-2px;">- ON -</p>
-        <a class="tab-item" href="#">
-          {{drop.park_feature}}
-        </a>
-      </div>
-          
-        
-        <p>
-          <a href="#" class="subdued"> <i class="icon ion-thumbsup"></i> 19 people thinks this is Rad</a>
-        </p>
+      </video>
+      
+      <div id="trick">
+        <div class="row">
+          <div class="col">
+           <p><a href="#">{{drop.trick_ex}}</a> on <a href="#">
+            {{drop.park_feature}}</a></p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col">
+            <p>
+              <a href="#"> <i class="icon ion-thumbsup"></i> 19 people thinks this is Rad</a>
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Rad tabs ( Like, Share ) -->
-      <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" href="#">
+      <div class="item">
+        <!-- <a class="tab-item" href="#">
           <i class="icon ion-thumbsup"></i>
           Rad
-        </a>
+        </a> -->
+      <div class="button-bar">
+  <a class="button button-positive">+ Rad</a>
+  <a class="button button-positive">Comment</a>
+</div>
         
-        <a class="tab-item" href="#">
+        <!-- <a class="tab-item" href="#">
           <i class="icon ion-share"></i>
           Share
-        </a>
+        </a> -->
       </div>
 
     </div><!--  / list card -->
