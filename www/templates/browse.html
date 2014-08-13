@@ -1,89 +1,109 @@
+<!-- PROFILE PAGE -->
 <ion-view title="Crew">
-  <ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
-  <ion-content class="has-header">
-  	<div class="crew_profile">
-	    
-	    <!-- Profile Poster -->
-  		<div class="profile_poster">
-  			<img src="img/profile_poster.jpg">
-  		</div>
-		
-		<div class="profile_top">
-		  	<div class="row">
-		  		<!-- Profile Picture -->
-		  		<div class="col profile_pic">
-		  			<img src="img/profile_pic.png">
+
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+  	
+  	<ion-content class="has-header">
+  	
+	  	<div class="crew_profile">
+		    
+		    <!-- Profile Poster -->
+	  		<div class="profile_poster">
+	  			<img src="img/profile_poster.jpg">
+	  		</div>
+			
+	  		<!-- Profile Pic + Name -->
+			<div class="">
+			  	<div class="row">
+
+			  		<!-- Profile Picture -->
+			  		<div class="col col-25 profile_pic">
+			  			<img src="img/profile_pic.png">
+			  		</div>
+
+			  		<!-- Profile Username -->
+		   			<div class="col">
+		   				<h3>Brock Stone</h3>
+		   			</div>
+			  	</div> <!-- / row -->
+			</div> <!-- profile top -->
+
+			<div class="btm_shadow">
+
+				<div class="row">
+					
+					<!-- Drop Count -->
+		   			<div class="col count">
+		   				<h4 class="center">834</h4>
+		   				<p class="center">DROPS</p>
+		   			</div>
+
+		   			<!-- Friends Count -->
+		   			<div class="col count">
+		   				<h4 class="center">923</h4>
+		   				<p class="center">FRIENDS</p>
+		   			</div>
+
+		   			<!-- Followers Count -->
+		   			<div class="col">
+		   				<h4 class="center">923</h4>
+		   				<p class="center">FOLLOWERS</p>
+		   			</div>
+
 		  		</div>
-		  		<!-- Drops -->
-	   			<div class="col">
-	   				<h4 class="center" style="border-right:1px solid #fff;">145</h4>
-	   				<p class="center">Drops</p>
-	   			</div>
-	   			<!-- Friends -->
-	   			<div class="col">
-	   				<h4 class="center" style="border-right:1px solid #fff;">234</h4>
-	   				<p class="center">Friends</p>
-	   			</div>
-	   			<!-- Followers -->
-	   			<div class="col">
-	   				<h4 class="center">923</h4>
-	   				<p class="center">Followers</p>
-	   			</div>
-		  	</div> <!-- / row -->
-		</div> <!-- profile top -->
 
-		<div class="profile_name">
-			<div class="row">
-	  			<div class="col">
-	  				<h3>Brock Stone</h3>
-	  			</div>
+		  		<!-- STATUS + FOLLOW BUTTON -->
+				<div class="row">
+				  	<div class="col col-50">
+				  		<img class="center status" src="img/status.png">
+				  	</div>
+				  	<div class="col col-50">
+				  		<!-- <button class="button button-small button-block button-positive">Follow</button> -->
+				  		
+				  			<a class="center follow" href=""><img src="img/follow.png"></a>
+				  		
+				  	</div>
+				</div>
+			</div> <!-- / btm_shadow -->
+			 
+		  	<!-- BIO -->
+		  	<div class="row">
+		  		<div class="col"><h4 style="border-left:5px solid #1798D4; padding-left: 5px;">BIO</h4></div>
 		  	</div>
-			<div class="row">
-			  	<div class="col col-50">
-			  		<h4>Status On-Board</h4>
-			  	</div>
-			  	<div class="col col-50">
-			  		<button class="button button-small button-block button-positive">Follow</button>
-			  	</div>
-			</div>
-		</div> 
 
+		  	<div class="row">
+		  		<div class="col"><p>This is an example of a short biography a user would write. This biography is just a filler. Blah blah blah, i dont feel like writing right now its 4 am.</p></div>
+		  	</div>
 
+		  	<!-- RIDER STATS -->
+		  	<div class="row">
+		  		<div class="col"><h4 style="border-left:5px solid #1798D4; padding-left: 5px;">RIDER STATISTICS</h4></div>
+		  	</div>
 
-	  	
-	  	<div class="row">
-	  		<div class="col"><h4>Bio</h4></div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><p>This is an example of a short biography a user would write. This biography is just a filler. Blah blah blah, i dont feel like writing right now its 4 am.</p></div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><h4>Rider Statistics</h4></div>
-	  	</div>
-	  	<div class="row center">
-	  		<div class="col col-50">
-	  			<h5>HOME MOUNTAIN</h5>
-	  		</div>
-	  		<div class="col">
-	  			<a href="">7 Springs</a>
+		  	<div class="row">
+		  		<div class="col-50">
+		  			<h5 class="stat">HOME MOUNTAIN</h5>
+		  			<h5 class="stat">TERRAIN</h5>
+			  		<h5 class="stat">YEARS RIDDEN</h5>
+			  		<h5 class="stat">BOARD</h5>
+			  		<h5 class="stat">BINDINGS</h5>
+				</div>
+				<div class="col-50">
+					<h5 class="stat">7 Springs Mountain</h5>
+					<h5 class="stat">Park</h5>
+			  		<h5 class="stat">15 Years</h5>
+			  		<h5 class="stat">Burton Parkitect 157''</h5>
+			  		<h5 class="stat"> Burton Cartels (15&deg;, -15&deg;)</h5>
+				</div>
+		  	</div>
+		  	
+		  	<!-- DROPS GALLERY -->
+		  	<div class="row">
+		  		<div class="col"><h4 style="border-left:5px solid #1798D4; padding-left: 5px;">DROPS</div>
+		  	</div>
 
-	  		</div>
-
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><h5>YEARS RIDDEN</h5></div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><h5>BOARD</h5></div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><h5>BINDINGS</h5></div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col"><h4>Drops:</div>
-	  	</div>
-  	</div>
-  </ion-content>
+	  	</div> <!-- / crew profile -->
+  	</ion-content>
 </ion-view>
