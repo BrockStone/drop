@@ -4,12 +4,13 @@ angular.module('drop.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
 
-  // Create the login modal that we will use later
+  // Login modal 
   $ionicModal.fromTemplateUrl('templates/log.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -51,6 +52,43 @@ angular.module('drop.controllers', [])
     { username: 'DJ_Rel'}
   ];
 })
+
+.controller('profileCtrl', function($scope, $ionicModal, $timeout) {
+  // Form data for profile
+  $scope.profileData = {
+      username: 'BrockStone'
+  };
+
+  // profile modal 
+  $ionicModal.fromTemplateUrl('templates/profile_edit.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+
+  // Triggered in the login modal to close it
+  $scope.closeEditProfile = function() {
+    $scope.modal.hide();
+  },
+
+  // Open the login modal
+  $scope.editProfile = function() {
+    $scope.modal.show();
+  };
+
+  // Perform the login action when the user submits the login form
+  $scope.doEditProfile = function() {
+    console.log('Profile Info:', $scope.profileData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeEditProfile();
+    }, 1000);
+  };
+})
+
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })

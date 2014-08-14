@@ -231,3 +231,38 @@
 2014-07-18 23:27:29.552 drop[52229:6cd7] 23:27:29.552 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
 2014-07-18 23:27:52.066 drop[52229:6cdb] 23:27:51.960 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
 2014-07-18 23:27:54.429 drop[52229:6cdb] 23:27:54.429 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-08-13 00:48:55.092 drop[63351:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-13 00:48:55.196 drop[63351:70b] Unlimited access to network resources
+2014-08-13 00:48:56.594 drop[63351:70b] [CDVTimer][keyboard] 26.670039ms
+2014-08-13 00:48:56.596 drop[63351:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-13 00:48:56.597 drop[63351:70b] [CDVTimer][statusbar] 0.979006ms
+2014-08-13 00:48:56.597 drop[63351:70b] [CDVTimer][TotalPluginStartup] 29.699028ms
+2014-08-13 00:48:57.722 drop[63351:70b] Resetting plugins due to page load.
+2014-08-13 00:48:58.703 drop[63351:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-13 00:49:13.994 drop[63351:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+2014-08-13 00:55:49.119 drop[63694:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-13 00:55:49.174 drop[63694:70b] Unlimited access to network resources
+2014-08-13 00:55:49.285 drop[63694:70b] [CDVTimer][keyboard] 0.063002ms
+2014-08-13 00:55:49.285 drop[63694:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-13 00:55:49.286 drop[63694:70b] [CDVTimer][statusbar] 0.387013ms
+2014-08-13 00:55:49.286 drop[63694:70b] [CDVTimer][TotalPluginStartup] 1.248002ms
+2014-08-13 00:55:49.359 drop[63694:70b] Resetting plugins due to page load.
+2014-08-13 00:55:49.898 drop[63694:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-13 00:55:51.649 drop[63694:70b] setting movie path: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/vids/openingwkend.mp4
+Aug 13 02:58:02 Brocks-MacBook-Pro.local drop[63694] <Error>: CGImageCreate: invalid image size: 0 x 0.
+2014-08-13 02:58:25.298 drop[64995:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-13 02:58:25.307 drop[64995:70b] Unlimited access to network resources
+2014-08-13 02:58:25.354 drop[64995:70b] [CDVTimer][keyboard] 0.061989ms
+2014-08-13 02:58:25.355 drop[64995:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-13 02:58:25.356 drop[64995:70b] [CDVTimer][statusbar] 0.681043ms
+2014-08-13 02:58:25.356 drop[64995:70b] [CDVTimer][TotalPluginStartup] 1.947045ms
+2014-08-13 02:58:27.824 drop[64995:70b] Resetting plugins due to page load.
+2014-08-13 02:58:28.765 drop[64995:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-13 03:42:05.831 drop[66102:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-13 03:42:05.882 drop[66102:70b] Unlimited access to network resources
+2014-08-13 03:42:05.967 drop[66102:70b] [CDVTimer][keyboard] 0.060976ms
+2014-08-13 03:42:05.968 drop[66102:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-13 03:42:05.968 drop[66102:70b] [CDVTimer][statusbar] 0.361025ms
+2014-08-13 03:42:05.968 drop[66102:70b] [CDVTimer][TotalPluginStartup] 1.239002ms
+2014-08-13 03:42:07.286 drop[66102:70b] Resetting plugins due to page load.
+2014-08-13 03:42:07.821 drop[66102:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop

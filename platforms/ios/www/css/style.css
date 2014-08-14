@@ -1,6 +1,6 @@
-/* Empty. Add your own CSS if you like */
-.headLogo{
-	margin-top: 7px;
+/*GLOBAL*/
+p{
+	font-size: 11px;
 }
 
 .scroll-content{
@@ -10,11 +10,85 @@
 .bar-dark{
 	background-color: #232323;
 }
-
+.center{
+	margin: 0 auto;
+}
 hr{
 	border: 1px solid #4f4f4f;
 }
 
-.dropvid{
-	margin-bottom: 0px;
+/*LOGIN*/
+.headLogo{
+	margin-top: 7px;
+}
+
+/*PROFILE*/
+
+.crew_profile{
+	color: #ffffff;
+	background-color: #232323;
+
+}
+.profile_top{
+	background-color: #232323;
+	margin-top: -6px;
+	height: 65px;
+	-webkit-box-shadow: 0 8px 6px -3px black; 
+	-moz-box-shadow: 0 8px 6px -6px black; 
+	box-shadow: 0 8px 6px -6px black;
+}
+.profile_pic{
+	margin-top: -25px;
+}
+.profile_name{
+	background-color: #303331;
+}
+#trick{
+	background-color: #232323;
+	margin-top: -5px;
+	color: #ffffff;
+}
+#trick a{
+	text-decoration: none;
+	color: #0BA5EC;
+}
+.btm_shadow{
+	-webkit-box-shadow: 0 8px 6px -6px black; 
+	-moz-box-shadow: 0 8px 6px -6px black; 
+	box-shadow: 0 8px 6px -6px black;
+}
+.stat{
+	border-bottom:1px solid grey; 
+	padding-bottom:8px;
+}
+.status{
+	padding: 3px 35px;
+	border: 1px solid #1CE554;
+	margin-top: 5px;
+}
+.follow{
+	padding: 3px 35px;
+	border: 1px solid #0086E4;
+	margin-top: 15px;
+}
+
+.right_border{
+	border-right: 1px solid grey;
+}
+div.row.count{
+	padding-bottom: 25px;
+}
+.count h4{
+	font-size: 12px;
+
+}
+.count p{
+	font-size: 10px;
+}
+#status{
+	margin-top: -25px;
+}
+
+#bio{
+	font-size: 11px;
 }

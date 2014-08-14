@@ -1,27 +1,36 @@
-/* Empty. Add your own CSS if you like */
-.headLogo{
-	margin-top: 7px;
+/*GLOBAL*/
+p{
+	font-size: 11px;
 }
 
 .scroll-content{
-	background-color: #353535;
+	background-color: #232323;
 }
 
 .bar-dark{
 	background-color: #232323;
 }
-
-hr{
-	border: 1px solid #4f4f4f;
-}
-
-.dropvid{
-	margin-bottom: 0px;
-}
-
 .center{
 	margin: 0 auto;
 }
+hr{
+	border: 1px solid #4f4f4f;
+}
+#home{
+	background-color: #323232;
+}
+
+/*         LOGIN
+===========================
+*/
+
+.headLogo{
+	margin-top: 7px;
+}
+
+/*         PROFILE
+===========================
+*/
 
 .crew_profile{
 	color: #ffffff;
@@ -37,7 +46,7 @@ hr{
 	box-shadow: 0 8px 6px -6px black;
 }
 .profile_pic{
-	margin-top: -20px;
+	margin-top: -50px;
 }
 .profile_name{
 	background-color: #303331;
@@ -61,17 +70,45 @@ hr{
 	padding-bottom:8px;
 }
 .status{
-	padding: 3px 35px;
-	border: 1px solid #1CE554;
-	margin-top: 5px;
+	margin-top: -15px;
 }
 .follow{
 	padding: 3px 35px;
 	border: 1px solid #0086E4;
-	margin-top: 5px;
+	margin-top: 15px;
 }
 
-.count{
+.right_border{
 	border-right: 1px solid grey;
 }
+div.row.count{
+	padding-bottom: 25px;
+}
+.count h4{
+	font-size: 12px;
 
+}
+.count p{
+	font-size: 10px;
+}
+#status{
+	margin-top: -25px;
+}
+
+#bio{
+	font-size: 11px;
+
+}
+#profile_postr{
+	width: 100%;
+}
+/*      PROFILE_EDIT
+===========================
+*/
+textarea{
+	background-color: #232323;
+	color: #ffffff;
+}
+.edit_header{
+	background-color: #232323;
+}
