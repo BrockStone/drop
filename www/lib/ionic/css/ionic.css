@@ -4607,7 +4607,7 @@ input, button, select, textarea {
   padding: 7px 10px 7px 3px;
   max-width: 200px;
   width: 35%;
-  color: #444;
+  color: #A3A3A3;
   font-weight: bold;
   font-size: 14px; }
 
@@ -5140,7 +5140,7 @@ input[type="range"] {
     max-width: 65%;
     border: none;
     background: transparent;
-    color: #333;
+    color: #ffffff;
     text-indent: 0.01px;
     text-overflow: '';
     white-space: nowrap;

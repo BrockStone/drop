@@ -3063,8 +3063,8 @@ a.subdued {
     background: none; }
 
 .bar-dark .button {
-  border-color: #111;
-  background-color: #444444;
+  border-color: #232323;
+  background-color: #232323;
   color: #0086E4; }
   .bar-dark .button:hover {
     color: #fff;

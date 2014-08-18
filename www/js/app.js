@@ -27,7 +27,7 @@ angular.module('drop', ['ionic', 'drop.controllers'])
       url: "/app",
       abstract: true,
       templateUrl: "templates/menu.html",
-      controller: 'AppCtrl'
+      controller: 'menuCtrl'
     })
 
     .state('app.love', {
@@ -40,8 +40,8 @@ angular.module('drop', ['ionic', 'drop.controllers'])
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.userProfile', {
+      url: "/userProfile",
       views: {
         'menuContent' :{
           templateUrl: "templates/user_profile.html",
@@ -49,6 +49,17 @@ angular.module('drop', ['ionic', 'drop.controllers'])
         }
       }
     })
+
+    .state('app.dropUpload', {
+      url: "/dropUpload",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/drop_upload.html",
+          controller: 'dropUploadCtrl'
+        }
+      }
+    })
+
     .state('app.dropFeed', {
       url: "/drop",
       views: {

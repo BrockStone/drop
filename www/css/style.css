@@ -120,3 +120,14 @@ textarea{
 .edit_header{
 	background-color: #232323;
 }
+/*      Drop Upload
+===========================
+*/
+#approach{
+	color: #ffffff;
+}
+#trick_executed{
+	color: #0090E4;
+	text-align: center;
+	margin-top: 40px;
+}

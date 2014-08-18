@@ -44,7 +44,8 @@ angular.module('drop', ['ionic', 'drop.controllers'])
       url: "/browse",
       views: {
         'menuContent' :{
-          templateUrl: "templates/user_profile.html"
+          templateUrl: "templates/user_profile.html",
+          controller: 'profileCtrl'
         }
       }
     })

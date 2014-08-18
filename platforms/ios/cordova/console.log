@@ -266,3 +266,11 @@ Aug 13 02:58:02 Brocks-MacBook-Pro.local drop[63694] <Error>: CGImageCreate: inv
 2014-08-13 03:42:05.968 drop[66102:70b] [CDVTimer][TotalPluginStartup] 1.239002ms
 2014-08-13 03:42:07.286 drop[66102:70b] Resetting plugins due to page load.
 2014-08-13 03:42:07.821 drop[66102:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-14 11:02:02.498 drop[73430:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-14 11:02:03.083 drop[73430:70b] Unlimited access to network resources
+2014-08-14 11:02:10.284 drop[73430:70b] [CDVTimer][keyboard] 40.611982ms
+2014-08-14 11:02:10.285 drop[73430:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-14 11:02:10.286 drop[73430:70b] [CDVTimer][statusbar] 0.990033ms
+2014-08-14 11:02:10.287 drop[73430:70b] [CDVTimer][TotalPluginStartup] 43.665946ms
+2014-08-14 11:02:14.813 drop[73430:70b] Resetting plugins due to page load.
+2014-08-14 11:02:19.994 drop[73430:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
