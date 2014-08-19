@@ -1,8 +1,15 @@
-angular.module('drop.controllers', [])
+angular.module('drop.controllers', ['firebase'])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-  // Form data for the login modal
-  $scope.loginData = {};
+//////////////////////
+// MAIN SLIDE OUT MENU
+//////////////////////
+
+.controller('menuCtrl', function($scope, $ionicModal, $timeout, $firebase, $firebaseSimpleLogin) {
+  
+  // FIREBASE REFERENCE
+  var ref = new Firebase('https://drop.firebaseio.com');
+  var authClient = $firebaseSimpleLogin(ref);
+
 
   // Login modal 
   $ionicModal.fromTemplateUrl('templates/log.html', {
@@ -11,38 +18,175 @@ angular.module('drop.controllers', [])
     $scope.modal = modal;
   });
 
+  // Form data Object for the login modal
+  $scope.loginData = {};
 
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  },
 
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
   };
 
+  // Triggered in the login modal to close it
+  $scope.closeLogin = function() {
+    $scope.modal.hide();
+  };
+
+  // log user in using the Facebook provider for Simple Login
+  $scope.loginWithFacebook = function() {
+      authClient.$login("facebook").then(function(user) {
+     
+
+      console.log("Logged in as: " + user.displayName);
+      var isNewUser = true;
+      if( isNewUser ) {
+      // save new user's profile into Firebase so we can
+      // list users, use them in security rules, and show profiles
+      ref.child('users').child(user.uid).set({
+        displayName: user.displayName,
+        provider: user.provider,
+        provider_id: user.id
+      });
+       authClient.$getCurrentUser();
+    }
+
+
+
+    }, function(error) {
+      console.error("Login failed: " + error);
+    });
+  };
+
+  // log user in using the Twitter provider for Simple Login
+  $scope.loginWithTwitter = function() {
+      authClient.$login("twitter").then(function(user) {
+      console.log("Logged in as: " + user.displayName);
+    }, function(error) {
+      console.error("Login failed: " + error);
+    });
+  };
+
+  // log user in using email and password
+  $scope.loginWithEmail = function(){
+    console.log($scope.loginData.username);
+    authClient.createUser(email, password, function(error, user) {
+  if (error === null) {
+        console.log("User created successfully:", user);
+      } else {
+        console.log("Error creating user:", error);
+      }
+    });
+  };
+
+  // // Perform the login action when the user submits the login form
+  // $scope.doLogin = function() {
+  //   console.log('Doing login', $scope.loginData);
+
+
+
+  //   // Simulate a login delay. Remove this and replace with your login
+  //   // code if using a login system
+  //   $timeout(function() {
+  //     $scope.closeLogin();
+  //   }, 1000);
+  // };
+})
+
+
+
+////////////////////////////////////////////////////////////
+// Drops Home (Username, id, trick, feature, video, location)
+////////////////////////////////////////////////////////////
+
+.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase) {
+  // $scope.drops = [
+  //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
+  //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
+  //   // { username: 'Skip', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
+  //   // { username: 'DJ_Rel', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'}
+  // ];
+
+  // FIREBASE REF
+   var ref = new Firebase('https://drop.firebaseio.com/drops');
+   var sync = $firebase(ref);
+
+   // Drops ARRAY
+  $scope.drops = sync.$asArray();
+
+  // Form data for profile
+  $scope.dropUploadData = {};
+
+
+
+  // Drop Upload modal 
+  $ionicModal.fromTemplateUrl('templates/drop_upload.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  // Drop Upload Location modal 
+  $ionicModal.fromTemplateUrl('templates/upload_location.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.dropLocation = modal;
+  });
+
+  // Open the Drop Upload modal
+  $scope.dropUpload = function() {
+    $scope.modal.show();
+  };
+  
+  // Close Drop Upload
+  $scope.closeDropUpload = function() {
+    $scope.modal.hide();
+  };
+
+
+  // Open the Drop Upload modal
+  $scope.getDropLocation = function() {
+    $scope.dropLocation.show();
+  };
+   // Open the Drop Upload modal
+  $scope.closeLoc = function() {
+    $scope.dropLocation.hide();
+  };
+
   // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
+  $scope.doDropUpload = function() {
+    console.log('Upload Info:', $scope.dropUploadData);
+      
+
+        
+        $scope.drops.$add($scope.dropUploadData).then(function(ref) {
+          var id = ref.name();
+          console.log("added record with id " + id);
+          $scope.drops.$indexFor(id); // returns location in the array
+
+           $ionicLoading.show({
+              template: 'UPLOADING DROP'
+            });
+            $timeout(function() {
+              $ionicLoading.hide();
+              $scope.closeLoc();
+              $scope.closeDropUpload();
+
+    }, 1000);
+
+        });
+
+
 
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
+   
   };
+
 })
 
-// Drop Home Scope Controller (Username, id, trick, feature, video, location)
-.controller('dropsCtrl', function($scope) {
-  $scope.drops = [
-    { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
-    { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
-    { username: 'Skip', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
-    { username: 'DJ_Rel', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'}
-  ];
-})
+////////////////
+// Notifications
+////////////////
 
 .controller('loveCtrl', function($scope) {
   $scope.loves = [
@@ -52,6 +196,10 @@ angular.module('drop.controllers', [])
     { username: 'DJ_Rel'}
   ];
 })
+
+////////////////
+// User Profile 
+////////////////
 
 .controller('profileCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for profile
@@ -87,6 +235,14 @@ angular.module('drop.controllers', [])
       $scope.closeEditProfile();
     }, 1000);
   };
+})
+
+////////////////
+// User Profile 
+////////////////
+
+.controller('dropUploadCtrl', function($scope, $ionicModal, $timeout) {
+  
 })
 
 

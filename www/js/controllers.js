@@ -1,15 +1,14 @@
 angular.module('drop.controllers', ['firebase'])
 
 //////////////////////
-// MAIN SLIDE OUT MENU
+// MAIN SLIDE OUT MENU ---> LOGIN
 //////////////////////
 
 .controller('menuCtrl', function($scope, $ionicModal, $timeout, $firebase, $firebaseSimpleLogin) {
   
   // FIREBASE REFERENCE
   var ref = new Firebase('https://drop.firebaseio.com');
-  var authClient = $firebaseSimpleLogin(ref);
-
+  $scope.authClient = $firebaseSimpleLogin(ref);
 
   // Login modal 
   $ionicModal.fromTemplateUrl('templates/log.html', {
@@ -18,9 +17,29 @@ angular.module('drop.controllers', ['firebase'])
     $scope.modal = modal;
   });
 
+  // profile modal 
+  $ionicModal.fromTemplateUrl('templates/profile_edit.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.profileModal = modal;
+  });
+
+   // Open the login modal and get session reference
+  $scope.addProfile = function() {
+   
+    $scope.profileModal.show();
+    
+    $scope.authClient.$getCurrentUser().then(function(user) {
+      if (user) { // Now, user isn't null.
+        
+        console.log(user.displayName);
+
+      } 
+    });;
+  };
+
   // Form data Object for the login modal
   $scope.loginData = {};
-
 
   // Open the login modal
   $scope.login = function() {
@@ -32,19 +51,52 @@ angular.module('drop.controllers', ['firebase'])
     $scope.modal.hide();
   };
 
-  // log user in using the Facebook provider for Simple Login
+
+
+  // Facebook provider for Simple Login
   $scope.loginWithFacebook = function() {
-      authClient.$login("facebook").then(function(user) {
+      
+    authClient.$login("facebook").then(function(user) {
+   
       console.log("Logged in as: " + user.displayName);
+
+      var isNewUser = true;
+      
+      if( isNewUser ) {
+      
+        // save new user's profile into Firebase so we can
+        // list users, use them in security rules, and show profiles
+        ref.child('users').child(user.uid).set({
+          displayName: user.displayName,
+          provider: user.provider,
+          provider_id: user.id
+        });
+      }
     }, function(error) {
       console.error("Login failed: " + error);
     });
   };
 
-  // log user in using the Twitter provider for Simple Login
+  // Twitter provider for Simple Login
   $scope.loginWithTwitter = function() {
-      authClient.$login("twitter").then(function(user) {
+      
+    $scope.authClient.$login("twitter").then(function(user) {
+      
       console.log("Logged in as: " + user.displayName);
+
+      var isNewUser = true;
+      
+      if( isNewUser ) {
+      
+        // save new user's profile into Firebase so we can
+        // list users, use them in security rules, and show profiles
+        ref.child('users').child(user.uid).set({
+          displayName: user.displayName,
+          provider: user.provider,
+          provider_id: user.id
+        });
+        $scope.addProfile();
+      }
     }, function(error) {
       console.error("Login failed: " + error);
     });
@@ -52,28 +104,25 @@ angular.module('drop.controllers', ['firebase'])
 
   // log user in using email and password
   $scope.loginWithEmail = function(){
-    console.log($scope.loginData.username);
-    authClient.createUser(email, password, function(error, user) {
-  if (error === null) {
+   // console.log($scope.loginData.username);
+    // $scope.authClient.createUser($scope.loginData.username, $scope.loginData.password).then(function(user) {
+    //   if (user) {
+    //     console.log("User created successfully:", user);
+    //   } else {
+    //     console.log("Error creating user:", error);
+    //   }
+    // });
+    
+    $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
+    .then(function(user){
+        // do things if success
         console.log("User created successfully:", user);
-      } else {
-        console.log("Error creating user:", error);
-      }
-    });
+    }, function(error){
+        // do things if failure
+    }); 
   };
 
-  // // Perform the login action when the user submits the login form
-  // $scope.doLogin = function() {
-  //   console.log('Doing login', $scope.loginData);
-
-
-
-  //   // Simulate a login delay. Remove this and replace with your login
-  //   // code if using a login system
-  //   $timeout(function() {
-  //     $scope.closeLogin();
-  //   }, 1000);
-  // };
+  
 })
 
 
