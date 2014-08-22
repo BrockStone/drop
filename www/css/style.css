@@ -136,6 +136,21 @@ textarea{
 	margin-top: 40px;
 }
 
+#rad_btn{
+	padding: 8px 25px;
+	background-color: #0BA5EC;
+	color: #232323;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#comment_btn{
+	padding: 8px 25px;
+	color: #0BA5EC;
+	font-size: 11px;
+	text-decoration: none;
+}
+
 #trick h4{
 	font-size: 11px;
 }
