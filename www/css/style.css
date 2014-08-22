@@ -18,6 +18,10 @@ hr{
 }
 #home{
 	background-color: #323232;
+	margin-top: 35px;
+}
+#home.scroll{
+	margin-top: 20px;
 }
 
 /*         LOGIN
@@ -130,4 +134,11 @@ textarea{
 	color: #0090E4;
 	text-align: center;
 	margin-top: 40px;
+}
+
+#trick h4{
+	font-size: 11px;
+}
+#vid_type{
+	margin-top: -5px;
 }

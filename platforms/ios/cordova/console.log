@@ -306,3 +306,49 @@ Aug 13 02:58:02 Brocks-MacBook-Pro.local drop[63694] <Error>: CGImageCreate: inv
 2014-08-19 01:04:02.426 drop[99228:a4a7] 01:04:02.426 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
 2014-08-19 01:04:03.691 drop[99228:a4a7] 01:04:03.691 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
 2014-08-19 02:06:11.737 drop[99228:7cbf] 02:06:11.737 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-08-19 22:28:03.301 drop[6615:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-19 22:28:03.879 drop[6615:70b] Unlimited access to network resources
+2014-08-19 22:28:05.879 drop[6615:70b] [CDVTimer][keyboard] 15.325010ms
+2014-08-19 22:28:05.879 drop[6615:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-19 22:28:05.880 drop[6615:70b] [CDVTimer][statusbar] 0.810981ms
+2014-08-19 22:28:05.881 drop[6615:70b] [CDVTimer][TotalPluginStartup] 17.988980ms
+2014-08-19 22:28:08.078 drop[6615:70b] Resetting plugins due to page load.
+2014-08-19 22:28:09.683 drop[6615:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-19 22:28:28.618 drop[6615:70b] Resetting plugins due to page load.
+2014-08-19 22:28:30.437 drop[6615:70b] Finished load of: https://auth.firebase.com/blank/page.html#&token=%22eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MDg1ODgxMDksInYiOjAsImQiOnsiaWQiOiIxMDE1MjM5MTQ5MzU1NTg4OSIsInVpZCI6ImZhY2Vib29rOjEwMTUyMzkxNDkzNTU1ODg5IiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MDg1MDE3MDh9.FXKvyA5WJzc8KGYGETiXvjCHzEtd1Gz-hghdaS65aKA%22&user=%7B%22id%22%3A%2210152391493555889%22%2C%22uid%22%3A%22facebook%3A10152391493555889%22%2C%22displayName%22%3A%22Brock%20Stone%22%2C%22provider%22%3A%22facebook%22%2C%22sessionKey%22%3A%2209f4a6658063ae46482769b898adcd14%22%2C%22thirdPartyUserData%22%3A%7B%22id%22%3A%2210152391493555889%22%2C%22name%22%3A%22Brock%20Stone%22%2C%22last_name%22%3A%22Stone%22%2C%22first_name%22%3A%22Brock%22%2C%22gender%22%3A%22male%22%2C%22link%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fapp_scoped_user_id%2F10152391493555889%2F%22%2C%22picture%22%3A%7B%22data%22%3A%7B%22is_silhouette%22%3Afalse%2C%22url%22%3A%22https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xaf1%2Ft1.0-1%2Fp100x100%2F995307_10151995349965889_774186507_n.jpg%22%7D%7D%2C%22age_range%22%3A%7B%22min%22%3A21%7D%2C%22locale%22%3A%22en_US%22%2C%22timezone%22%3A-4%7D%2C%22accessToken%22%3A%22CAAVaqIhkxDsBANfACDZBZALr6K0wLSOR9BLc9eqfhNlONd0J1vMcqjkmyyWgOf8mvJGB0APRx0tHYqZAeVDGFJq1qZCqwHkGwVW5K128tBLSPWZAJI1I5PTtWhIAQC6GPiBF1FsxjrQCPWeCnYc3aIfn5f20K6pqm21tfQoSZAnc9upSlW1LJcplrMhqWG3NkJvRH6cFcJz3VpADOCg32ZA%22%7D
+2014-08-19 22:31:53.190 drop[6881:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-19 22:31:53.224 drop[6881:70b] Unlimited access to network resources
+2014-08-19 22:31:53.268 drop[6881:70b] [CDVTimer][keyboard] 0.060976ms
+2014-08-19 22:31:53.269 drop[6881:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-19 22:31:53.269 drop[6881:70b] [CDVTimer][statusbar] 0.451982ms
+2014-08-19 22:31:53.269 drop[6881:70b] [CDVTimer][TotalPluginStartup] 1.709998ms
+2014-08-19 22:31:54.216 drop[6881:70b] Resetting plugins due to page load.
+2014-08-19 22:31:54.956 drop[6881:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-19 22:32:37.291 drop[6881:70b] Resetting plugins due to page load.
+2014-08-19 22:32:40.018 drop[6881:70b] Finished load of: https://auth.firebase.com/blank/page.html#&token=%22eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MDg1ODgzNTgsInYiOjAsImQiOnsiaWQiOiIxMDE1MjM5MTQ5MzU1NTg4OSIsInVpZCI6ImZhY2Vib29rOjEwMTUyMzkxNDkzNTU1ODg5IiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MDg1MDE5NTh9.TtRBWvgrRRPlskTVocqgNMF0lSjfpL-hOfG9hgx2g3A%22&user=%7B%22id%22%3A%2210152391493555889%22%2C%22uid%22%3A%22facebook%3A10152391493555889%22%2C%22displayName%22%3A%22Brock%20Stone%22%2C%22provider%22%3A%22facebook%22%2C%22sessionKey%22%3A%224314d3da9e5f76484302a659d7273c72%22%2C%22thirdPartyUserData%22%3A%7B%22id%22%3A%2210152391493555889%22%2C%22name%22%3A%22Brock%20Stone%22%2C%22last_name%22%3A%22Stone%22%2C%22first_name%22%3A%22Brock%22%2C%22gender%22%3A%22male%22%2C%22link%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fapp_scoped_user_id%2F10152391493555889%2F%22%2C%22picture%22%3A%7B%22data%22%3A%7B%22is_silhouette%22%3Afalse%2C%22url%22%3A%22https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xaf1%2Ft1.0-1%2Fp100x100%2F995307_10151995349965889_774186507_n.jpg%22%7D%7D%2C%22age_range%22%3A%7B%22min%22%3A21%7D%2C%22locale%22%3A%22en_US%22%2C%22timezone%22%3A-4%7D%2C%22accessToken%22%3A%22CAAVaqIhkxDsBABT5oD1Oq4uNobZBFutMDm6FPus4ZCAsX8jUCqaNU6Pk16piS2VcD7ccsm5FyLvs0lWidvR0s5bzTqRWkpFzVJjctUfec0I4TAfJp4CPlB8tqpO700SY7BKnfCn5pHFHTKdQmx6MTaOE69of3uZBKB4ZCwVyevc3wVI2PTozq6kMc9zovwbAA6flq5JsRSz6J1L8NEfV%22%7D
+2014-08-20 01:04:33.477 drop[7674:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-20 01:04:33.790 drop[7674:70b] Unlimited access to network resources
+2014-08-20 01:04:37.959 drop[7674:70b] [CDVTimer][keyboard] 32.254994ms
+2014-08-20 01:04:37.960 drop[7674:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-20 01:04:37.961 drop[7674:70b] [CDVTimer][statusbar] 0.979960ms
+2014-08-20 01:04:37.962 drop[7674:70b] [CDVTimer][TotalPluginStartup] 35.260975ms
+2014-08-20 01:04:38.705 drop[7674:70b] Resetting plugins due to page load.
+2014-08-20 01:04:40.332 drop[7674:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-20 01:05:10.913 drop[7674:70b] Resetting plugins due to page load.
+2014-08-20 01:05:13.235 drop[7674:70b] Finished load of: https://api.twitter.com/oauth/authenticate?oauth_token=PeNpO7IfmLRpd8ZLdglJAjkg5TAASLSf29gF0Qmo
+2014-08-20 01:05:29.846 drop[7674:70b] Resetting plugins due to page load.
+2014-08-20 01:05:30.905 drop[7674:70b] Finished load of: https://twitter.com/login/error?redirect_after_login=https%3A%2F%2Fapi.twitter.com%2Foauth%2Fauthorize%3Fcancel%3DCancel%26oauth_token%3DPeNpO7IfmLRpd8ZLdglJAjkg5TAASLSf29gF0Qmo
+2014-08-20 01:06:04.064 drop[7674:70b] Resetting plugins due to page load.
+2014-08-20 01:06:04.677 drop[7674:70b] Finished load of: https://twitter.com/
+2014-08-20 01:06:04.678 drop[7674:70b] Resetting plugins due to page load.
+2014-08-20 01:06:05.940 drop[7674:70b] Finished load of: https://mobile.twitter.com/
+2014-08-20 01:07:14.401 drop[7909:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-20 01:07:14.441 drop[7909:70b] Unlimited access to network resources
+2014-08-20 01:07:14.478 drop[7909:70b] [CDVTimer][keyboard] 0.060022ms
+2014-08-20 01:07:14.478 drop[7909:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-20 01:07:14.479 drop[7909:70b] [CDVTimer][statusbar] 0.391006ms
+2014-08-20 01:07:14.479 drop[7909:70b] [CDVTimer][TotalPluginStartup] 1.237988ms
+2014-08-20 01:07:16.192 drop[7909:70b] Resetting plugins due to page load.
+2014-08-20 01:07:16.877 drop[7909:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-20 01:07:23.696 drop[7909:70b] Resetting plugins due to page load.
+2014-08-20 01:07:25.022 drop[7909:70b] Finished load of: https://auth.firebase.com/blank/page.html#&token=%22eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MDg1OTc2NDQsInYiOjAsImQiOnsiaWQiOiIxMDE1MjM5MTQ5MzU1NTg4OSIsInVpZCI6ImZhY2Vib29rOjEwMTUyMzkxNDkzNTU1ODg5IiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MDg1MTEyNDR9.OTsxHC7dKbOtGAT4nhwp1Ob_zyQjGeLCxaqSHZPguq4%22&user=%7B%22id%22%3A%2210152391493555889%22%2C%22uid%22%3A%22facebook%3A10152391493555889%22%2C%22displayName%22%3A%22Brock%20Stone%22%2C%22provider%22%3A%22facebook%22%2C%22sessionKey%22%3A%220d845d1167642e48c620b5e8ca666300%22%2C%22thirdPartyUserData%22%3A%7B%22id%22%3A%2210152391493555889%22%2C%22name%22%3A%22Brock%20Stone%22%2C%22last_name%22%3A%22Stone%22%2C%22first_name%22%3A%22Brock%22%2C%22gender%22%3A%22male%22%2C%22link%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fapp_scoped_user_id%2F10152391493555889%2F%22%2C%22picture%22%3A%7B%22data%22%3A%7B%22is_silhouette%22%3Afalse%2C%22url%22%3A%22https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xaf1%2Ft1.0-1%2Fp100x100%2F995307_10151995349965889_774186507_n.jpg%22%7D%7D%2C%22age_range%22%3A%7B%22min%22%3A21%7D%2C%22locale%22%3A%22en_US%22%2C%22timezone%22%3A-4%7D%2C%22accessToken%22%3A%22CAAVaqIhkxDsBACeTTgShANEmEsjpZBMR8WgqOMHKpijQipodUnSIWzeZAOCpdZAPL2U3RNSk4YgyyHvXzZC0kmZBNO3HVxAJdpZAHinZC4JQP5bfes5rFrelReMX0FGL1FWRZCbOwA2ZAlI0kgSRuoGOJQX5ZA01QNE1P4SeT6YaZB4E26ROiZCMi5DN34JMFr2j1KBMEN6Ccl6lxdBKqnptAGxB%22%7D

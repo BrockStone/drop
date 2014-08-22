@@ -96,7 +96,7 @@
   
 
     <!-- Sign up by Email Form -->
-    <form ng-submit="loginWithFacebook()">
+    <form ng-submit="loginWithEmail()">
       <div class="list">
 
         <!-- Email Input -->
@@ -117,26 +117,30 @@
           <button class="button button-block button-positive" type="submit">Log in</button>
         </label>
 
+        </form>
+
         <label class="item">
           <div class="row">
-            <div class="col col-33 col-offset-33">
-              Or Social Login
+            <div class="col edit_header">
+              <h2 style="border-left:5px solid #1798D4; padding-left: 5px;">SOCIAL DROP IN</h2>
             </div>
           </div>
         </label>
 
         <!-- Drop in with Facebook -->
-        <label class="item">
-          <button class="button button-outline button-block button-positive" type="submit"><i class="ion-social-facebook"></i> Drop in with Facebook</button>
-        </label>
-
-        <!-- Drop in with Twitter -->
-        <label class="item">
-          <button class="button button-outline button-block button-positive" type="submit"><i class="ion-social-twitter"></i> Drop In with Twitter</button>
-        </label>
+         <div class="row">
+            <div class="col">
+            <form ng-submit="loginWithFacebook()"><button class="button button-block button-positive" type="submit"><i class="ion-social-facebook"></i> Drop in with Facebook</button></form>
+            
+            <form ng-submit="loginWithTwitter()">
+          <button class="button button-block button-positive" type="submit"><i class="ion-social-twitter"></i> Drop In with Twitter</button>
+          </form>
+          </div>
+          </div>
+        
 
       </div> <!-- / List -->
-    </form>
+    
   </ion-content>
 </div> <!-- / modal -->
 

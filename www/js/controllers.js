@@ -4,7 +4,7 @@ angular.module('drop.controllers', ['firebase'])
 // MAIN SLIDE OUT MENU ---> LOGIN
 //////////////////////
 
-.controller('menuCtrl', function($scope, $ionicModal, $timeout, $firebase, $firebaseSimpleLogin) {
+.controller('menuCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $firebaseSimpleLogin) {
   
   // FIREBASE REFERENCE
   var ref = new Firebase('https://drop.firebaseio.com');
@@ -17,26 +17,63 @@ angular.module('drop.controllers', ['firebase'])
     $scope.modal = modal;
   });
 
-  // profile modal 
-  $ionicModal.fromTemplateUrl('templates/profile_edit.html', {
+  // Create profile modal 
+  $ionicModal.fromTemplateUrl('templates/create_profile.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.profileModal = modal;
   });
 
-   // Open the login modal and get session reference
+  // Open the create profile modal and get session reference
   $scope.addProfile = function() {
-   
     $scope.profileModal.show();
-    
+  };
+
+  // Form data for profile
+  $scope.profileData = {};
+
+  // Create user profile and send to Db
+  $scope.doCreateProfile = function(){
     $scope.authClient.$getCurrentUser().then(function(user) {
       if (user) { // Now, user isn't null.
-        
-        console.log(user.displayName);
 
+        if ($scope.profileData.displayName == null || $scope.profileData.bio == null || $scope.profileData.homeMtn == null || $scope.profileData.terrain == null || $scope.profileData.yearsRidden == null || $scope.profileData.board == null || $scope.profileData.bindings == null) {
+
+          $ionicLoading.show({
+            template: '<i class="ion-android-close"></i> FILL OUT ALL FIELDS'
+            });
+            $timeout(function() {
+            $ionicLoading.hide();
+          }, 1500);
+          
+        }else{
+          
+            $ionicLoading.show({
+            template: '<i class="icon ion-loading-c"></i> CREATING PROFILE'
+            });
+            $timeout(function() {
+            $ionicLoading.hide();
+          }, 1000);
+
+          console.log(user.uid);
+          console.log($scope.profileData);
+
+          ref.child('profiles').child(user.uid).set({
+            displayName: $scope.profileData.displayName,
+            bio: $scope.profileData.bio,
+            home_mountain: $scope.profileData.homeMtn,
+            terrain: $scope.profileData.terrain,
+            years_ridden: $scope.profileData.yearsRidden,
+            board: $scope.profileData.board,
+            bindings: $scope.profileData.bindings,
+            provider: user.provider,
+            provider_id: user.id
+          });
+        }
       } 
-    });;
+    });
   };
+
 
   // Form data Object for the login modal
   $scope.loginData = {};
@@ -56,7 +93,7 @@ angular.module('drop.controllers', ['firebase'])
   // Facebook provider for Simple Login
   $scope.loginWithFacebook = function() {
       
-    authClient.$login("facebook").then(function(user) {
+    $scope.authClient.$login("facebook").then(function(user) {
    
       console.log("Logged in as: " + user.displayName);
 
@@ -75,6 +112,7 @@ angular.module('drop.controllers', ['firebase'])
     }, function(error) {
       console.error("Login failed: " + error);
     });
+    $scope.addProfile();
   };
 
   // Twitter provider for Simple Login
@@ -104,14 +142,14 @@ angular.module('drop.controllers', ['firebase'])
 
   // log user in using email and password
   $scope.loginWithEmail = function(){
-   // console.log($scope.loginData.username);
-    // $scope.authClient.createUser($scope.loginData.username, $scope.loginData.password).then(function(user) {
-    //   if (user) {
-    //     console.log("User created successfully:", user);
-    //   } else {
-    //     console.log("Error creating user:", error);
-    //   }
-    // });
+   console.log($scope.loginData.username);
+    $scope.authClient.createUser($scope.loginData.username, $scope.loginData.password).then(function(user) {
+      if (user) {
+        console.log("User created successfully:", user);
+      } else {
+        console.log("Error creating user:", error);
+      }
+    });
     
     $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
     .then(function(user){

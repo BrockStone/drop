@@ -10,6 +10,23 @@
   <ion-nav-buttons side="right">
     <button ng-click="dropUpload()" class="button button-icon icon ion-ios7-videocam"></button>
   </ion-nav-buttons>
+
+  <div class="bar bar-subheader">
+    <div id="vid_type">
+    <label class="item item-input item-select">
+    <div class="input-label">
+      Drops
+    </div>
+    <select>
+      <option selected>Popular</option>
+      <option>Crew</option>
+      <option>Friends</option>
+      <option>Bails</option>
+    </select>
+  </label>
+  </div>
+
+  </div>
    
   <!-- Drop Feed -->
   <ion-content id="home" class="has-header">
@@ -18,8 +35,9 @@
     <!-- Drop username & location -->
       <div class="item item-avatar" >
         <img src="">
-        <h2>{{drop.username}}</h2>
-        <p>Uploaded a Drop</p>
+        <!-- <h2>{{drop.username}}</h2> -->
+        <h4>Brock Stone</h4>
+        <h4>Uploaded a Drop</h4>
          <p>{{drop.location}}</p>
       </div>
 
@@ -29,17 +47,15 @@
       </video>
       
       <div id="trick">
-        <div class="row">
-          <div class="col">
-           <p>{{drop.trick_ex}} on {{drop.park_feature}}</p>
-          </div>
-        </div>
+        
 
 
         <div class="row">
           <div class="col">
             <p>
-              <a href="#"> <i class="icon ion-thumbsup"></i> 19 people thinks this is Rad</a>
+              <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
+              <h4>BS GRIND ON DOWN LEDGE</h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i> 19 RIDERS THINK THIS IS RAD!</a></h4>
             </p>
           </div>
         </div>
@@ -51,10 +67,9 @@
           <i class="icon ion-thumbsup"></i>
           Rad
         </a> -->
-      <div class="button-bar">
-  <a class="button button-positive">+ Rad</a>
-  <a class="button button-positive">Comment</a>
-</div>
+      <button class="button button-small button-positive">
+  Rad
+</button>
         
         <!-- <a class="tab-item" href="#">
           <i class="icon ion-share"></i>
