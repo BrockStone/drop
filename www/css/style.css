@@ -13,9 +13,7 @@ p{
 .center{
 	margin: 0 auto;
 }
-hr{
-	border: 1px solid #4f4f4f;
-}
+
 #home{
 	background-color: #323232;
 	margin-top: 35px;
@@ -155,5 +153,9 @@ textarea{
 	font-size: 11px;
 }
 #vid_type{
-	margin-top: -5px;
+	margin-top: -5px
+}
+#trick_show{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #323232;
 }
