@@ -13,11 +13,13 @@ p{
 .center{
 	margin: 0 auto;
 }
-hr{
-	border: 1px solid #4f4f4f;
-}
+
 #home{
 	background-color: #323232;
+	margin-top: 35px;
+}
+#home.scroll{
+	margin-top: 20px;
 }
 
 /*         LOGIN
@@ -130,4 +132,30 @@ textarea{
 	color: #0090E4;
 	text-align: center;
 	margin-top: 40px;
+}
+
+#rad_btn{
+	padding: 8px 25px;
+	background-color: #0BA5EC;
+	color: #232323;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#comment_btn{
+	padding: 8px 25px;
+	color: #0BA5EC;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#trick h4{
+	font-size: 11px;
+}
+#vid_type{
+	margin-top: -5px
+}
+#trick_show{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #323232;
 }

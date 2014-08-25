@@ -352,3 +352,14 @@ Aug 13 02:58:02 Brocks-MacBook-Pro.local drop[63694] <Error>: CGImageCreate: inv
 2014-08-20 01:07:16.877 drop[7909:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
 2014-08-20 01:07:23.696 drop[7909:70b] Resetting plugins due to page load.
 2014-08-20 01:07:25.022 drop[7909:70b] Finished load of: https://auth.firebase.com/blank/page.html#&token=%22eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MDg1OTc2NDQsInYiOjAsImQiOnsiaWQiOiIxMDE1MjM5MTQ5MzU1NTg4OSIsInVpZCI6ImZhY2Vib29rOjEwMTUyMzkxNDkzNTU1ODg5IiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MDg1MTEyNDR9.OTsxHC7dKbOtGAT4nhwp1Ob_zyQjGeLCxaqSHZPguq4%22&user=%7B%22id%22%3A%2210152391493555889%22%2C%22uid%22%3A%22facebook%3A10152391493555889%22%2C%22displayName%22%3A%22Brock%20Stone%22%2C%22provider%22%3A%22facebook%22%2C%22sessionKey%22%3A%220d845d1167642e48c620b5e8ca666300%22%2C%22thirdPartyUserData%22%3A%7B%22id%22%3A%2210152391493555889%22%2C%22name%22%3A%22Brock%20Stone%22%2C%22last_name%22%3A%22Stone%22%2C%22first_name%22%3A%22Brock%22%2C%22gender%22%3A%22male%22%2C%22link%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fapp_scoped_user_id%2F10152391493555889%2F%22%2C%22picture%22%3A%7B%22data%22%3A%7B%22is_silhouette%22%3Afalse%2C%22url%22%3A%22https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xaf1%2Ft1.0-1%2Fp100x100%2F995307_10151995349965889_774186507_n.jpg%22%7D%7D%2C%22age_range%22%3A%7B%22min%22%3A21%7D%2C%22locale%22%3A%22en_US%22%2C%22timezone%22%3A-4%7D%2C%22accessToken%22%3A%22CAAVaqIhkxDsBACeTTgShANEmEsjpZBMR8WgqOMHKpijQipodUnSIWzeZAOCpdZAPL2U3RNSk4YgyyHvXzZC0kmZBNO3HVxAJdpZAHinZC4JQP5bfes5rFrelReMX0FGL1FWRZCbOwA2ZAlI0kgSRuoGOJQX5ZA01QNE1P4SeT6YaZB4E26ROiZCMi5DN34JMFr2j1KBMEN6Ccl6lxdBKqnptAGxB%22%7D
+2014-08-22 02:18:25.713 drop[21996:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-22 02:18:26.074 drop[21996:70b] Unlimited access to network resources
+2014-08-22 02:18:35.914 drop[21996:70b] [CDVTimer][keyboard] 2.194047ms
+2014-08-22 02:18:35.936 drop[21996:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-22 02:18:35.937 drop[21996:70b] [CDVTimer][statusbar] 1.348972ms
+2014-08-22 02:18:35.938 drop[21996:70b] [CDVTimer][TotalPluginStartup] 26.625037ms
+2014-08-22 02:18:39.080 drop[21996:70b] Resetting plugins due to page load.
+2014-08-22 02:18:42.505 drop[21996:70b] Finished load of: file:///Users/brockstone155/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/46A00D6D-C96F-4C49-9984-86CC09294139/drop.app/www/index.html#/app/drop
+2014-08-22 02:20:17.115 drop[21996:70b] Upload Info: [object Object]
+2014-08-22 02:20:17.125 drop[21996:70b] THREAD WARNING: ['Console'] took '10.266846' ms. Plugin should use a background thread.
+2014-08-22 02:20:17.144 drop[21996:70b] added record with id -JUwMqY7v51s6pE7EsoG
