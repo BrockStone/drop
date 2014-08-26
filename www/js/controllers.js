@@ -1,4 +1,4 @@
-angular.module('drop.controllers', ['firebase'])
+angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
 //////////////////////
 // MAIN SLIDE OUT MENU ---> LOGIN
@@ -169,7 +169,7 @@ angular.module('drop.controllers', ['firebase'])
 // Drops Home (Username, id, trick, feature, video, location)
 ////////////////////////////////////////////////////////////
 
-.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase) {
+.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture) {
   // $scope.drops = [
   //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
   //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
@@ -230,28 +230,57 @@ angular.module('drop.controllers', ['firebase'])
 
         
         $scope.drops.$add($scope.dropUploadData).then(function(ref) {
+          
           var id = ref.name();
           console.log("added record with id " + id);
+          
           $scope.drops.$indexFor(id); // returns location in the array
 
-           $ionicLoading.show({
-              template: 'UPLOADING DROP'
-            });
-            $timeout(function() {
-              $ionicLoading.hide();
-              $scope.closeLoc();
-              $scope.closeDropUpload();
+          $ionicLoading.show({
+            template: 'UPLOADING DROP'
+          });
+          $timeout(function() {
+            $ionicLoading.hide();
+            $scope.closeLoc();
+            $scope.closeDropUpload();
+          }, 1000);
 
-    }, 1000);
-
-        });
-
-
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-   
+        });   
   };
+
+  
+
+  $scope.captureAudio = function() {
+    var options = { limit: 3, duration: 10 };
+
+    $cordovaCapture.captureAudio(options).then(function(audioData) {
+      // Success! Audio data is here
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+  }
+
+  $scope.captureImage = function() {
+    var options = { limit: 3 };
+
+    $cordovaCapture.captureImage(options).then(function(imageData) {
+      // Success! Image data is here
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+  }
+
+  $scope.captureVideo = function() {
+    var options = { limit: 3, duration: 15 };
+
+    $cordovaCapture.captureVideo(options).then(function(videoData) {
+      // Success! Video data is here
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+  }
+
+
 
 })
 
@@ -319,3 +348,9 @@ angular.module('drop.controllers', ['firebase'])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
+
+.controller('MyCtrl', function($scope, $cordovaCapture) {
+
+  
+
+});

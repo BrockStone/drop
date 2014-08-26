@@ -4,7 +4,7 @@
 // 'drop' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'drop.controllers' are found in controllers.js
-angular.module('drop', ['ionic', 'drop.controllers'])
+angular.module('drop', ['ionic', 'drop.controllers', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
