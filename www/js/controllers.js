@@ -274,9 +274,9 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     var options = { limit: 3, duration: 15 };
 
     $cordovaCapture.captureVideo(options).then(function(videoData) {
-      // Success! Video data is here
+      console.log(videoData);
     }, function(err) {
-      // An error occured. Show a message to the user
+      console.log(err);
     });
   }
 
