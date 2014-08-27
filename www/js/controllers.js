@@ -151,13 +151,13 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
       }
     });
     
-    $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
-    .then(function(user){
-        // do things if success
-        console.log("User created successfully:", user);
-    }, function(error){
-        // do things if failure
-    }); 
+    // $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
+    // .then(function(user){
+    //     // do things if success
+    //     console.log("User created successfully:", user);
+    // }, function(error){
+    //     // do things if failure
+    // }); 
   };
 
   
