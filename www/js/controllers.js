@@ -14,7 +14,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   $ionicModal.fromTemplateUrl('templates/log.html', {
     scope: $scope
   }).then(function(modal) {
-    $scope.modal = modal;
+    $scope.loginModal = modal;
   });
 
   // Create profile modal 
@@ -24,9 +24,31 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.profileModal = modal;
   });
 
+  // Create profile modal 
+  $ionicModal.fromTemplateUrl('templates/settings.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.settingsModal = modal;
+  });
+
   // Open the create profile modal and get session reference
   $scope.addProfile = function() {
     $scope.profileModal.show();
+  };
+
+   // Open the login
+  $scope.openLogin = function() {
+    $scope.loginModal.show();
+  };
+
+   // Open settings
+  $scope.openSettings = function() {
+    $scope.settingsModal.show();
+  };
+
+  // Open settings
+  $scope.closeSettings = function() {
+    $scope.settingsModal.hide();
   };
 
   // Form data for profile
@@ -73,95 +95,45 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
       } 
     });
   };
-
-
-  // Form data Object for the login modal
-  $scope.loginData = {};
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-
-
-  // Facebook provider for Simple Login
-  $scope.loginWithFacebook = function() {
-      
-    $scope.authClient.$login("facebook").then(function(user) {
-   
-      console.log("Logged in as: " + user.displayName);
-
-      var isNewUser = true;
-      
-      if( isNewUser ) {
-      
-        // save new user's profile into Firebase so we can
-        // list users, use them in security rules, and show profiles
-        ref.child('users').child(user.uid).set({
-          displayName: user.displayName,
-          provider: user.provider,
-          provider_id: user.id
-        });
-      }
-    }, function(error) {
-      console.error("Login failed: " + error);
-    });
-    $scope.addProfile();
-  };
-
-  // Twitter provider for Simple Login
-  $scope.loginWithTwitter = function() {
-      
-    $scope.authClient.$login("twitter").then(function(user) {
-      
-      console.log("Logged in as: " + user.displayName);
-
-      var isNewUser = true;
-      
-      if( isNewUser ) {
-      
-        // save new user's profile into Firebase so we can
-        // list users, use them in security rules, and show profiles
-        ref.child('users').child(user.uid).set({
-          displayName: user.displayName,
-          provider: user.provider,
-          provider_id: user.id
-        });
-        $scope.addProfile();
-      }
-    }, function(error) {
-      console.error("Login failed: " + error);
-    });
-  };
-
-  // log user in using email and password
-  $scope.loginWithEmail = function(){
-   console.log($scope.loginData.username);
-    $scope.authClient.createUser($scope.loginData.username, $scope.loginData.password).then(function(user) {
-      if (user) {
-        console.log("User created successfully:", user);
-      } else {
-        console.log("Error creating user:", error);
-      }
-    });
-    
-    // $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
-    // .then(function(user){
-    //     // do things if success
-    //     console.log("User created successfully:", user);
-    // }, function(error){
-    //     // do things if failure
-    // }); 
-  };
-
-  
 })
+
+.controller("loginCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin) {
+    // Get a reference to the Drop Firebase
+    var firebaseRef = new Firebase('https://drop.firebaseio.com');
+
+    // Create a Firebase Simple Login object
+    $scope.auth = $firebaseSimpleLogin(firebaseRef);
+
+    // Initially set no user to be logged in
+    $scope.user = null;
+
+    // Logs a user in with inputted provider
+    $scope.login = function(provider) {
+      $scope.auth.$login(provider);
+    };
+
+    // Logs a user out
+    $scope.logout = function() {
+      $scope.auth.$logout();
+    };
+
+    // Upon successful login, set the user object
+    $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
+      $scope.user = user;
+      console.log($scope.user);
+    });
+
+    // Upon successful logout, reset the user object
+    $rootScope.$on("$firebaseSimpleLogin:logout", function(event) {
+      $scope.user = null;
+    });
+
+    // Log any login-related errors to the console
+    $rootScope.$on("$firebaseSimpleLogin:error", function(event, error) {
+      console.log("Error logging user in: ", error);
+    });
+})
+
 
 
 
@@ -186,9 +158,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
   // Form data for profile
   $scope.dropUploadData = {};
-
-
-
+ 
   // Drop Upload modal 
   $ionicModal.fromTemplateUrl('templates/drop_upload.html', {
     scope: $scope

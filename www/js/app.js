@@ -60,6 +60,16 @@ angular.module('drop', ['ionic', 'drop.controllers', 'ngCordova'])
       }
     })
 
+    .state('app.settings', {
+      url: "/settings",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/drop_upload.html",
+          controller: 'settingsCtrl'
+        }
+      }
+    })
+
     .state('app.dropFeed', {
       url: "/drop",
       views: {

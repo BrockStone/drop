@@ -108,11 +108,11 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
           provider: user.provider,
           provider_id: user.id
         });
+        $scope.addProfile();
       }
     }, function(error) {
       console.error("Login failed: " + error);
     });
-    $scope.addProfile();
   };
 
   // Twitter provider for Simple Login
@@ -151,13 +151,13 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
       }
     });
     
-    $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
-    .then(function(user){
-        // do things if success
-        console.log("User created successfully:", user);
-    }, function(error){
-        // do things if failure
-    }); 
+    // $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
+    // .then(function(user){
+    //     // do things if success
+    //     console.log("User created successfully:", user);
+    // }, function(error){
+    //     // do things if failure
+    // }); 
   };
 
   
