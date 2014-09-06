@@ -4284,8 +4284,7 @@ a.item-content {
 .card, .list-inset {
   overflow: hidden;
   margin: 20px 10px;
-  border-radius: 2px;
-  background-color: #fff; }
+  border-radius: 2px; }
 
 .card {
   padding-top: 1px;

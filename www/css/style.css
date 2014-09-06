@@ -159,3 +159,8 @@ textarea{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #323232;
 }
+#rad_tabs{
+	background-color: #232323;
+	border-bottom: none;
+	padding-bottom: 10px;
+}
