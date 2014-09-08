@@ -36,9 +36,14 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.profileModal.show();
   };
 
-   // Open the login
+   // Open login
   $scope.openLogin = function() {
     $scope.loginModal.show();
+  };
+
+    // Close login
+  $scope.closeLogin = function() {
+    $scope.loginModal.hide();
   };
 
    // Open settings
@@ -141,7 +146,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 // Drops Home (Username, id, trick, feature, video, location)
 ////////////////////////////////////////////////////////////
 
-.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture) {
+.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation) {
   // $scope.drops = [
   //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
   //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
@@ -184,16 +189,64 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   };
 
 
-  // Open the Drop Upload modal
+  // Open the Drop location modal
   $scope.getDropLocation = function() {
     $scope.dropLocation.show();
+
+      $cordovaGeolocation
+          .getCurrentPosition()
+          .then(function (position) {
+
+            var latitude  = position.coords.latitude
+            var longitude = position.coords.longitude
+            console.log('lat= '+latitude);
+            console.log('long= '+longitude);
+
+          }, function(err) {
+            // error
+          });
+
+        // begin watching
+        var watch = $cordovaGeolocation.watchPosition({ frequency: 1000 });
+        
+        watch.promise.then(function() { /* Not  used */ }, 
+          function(err) {
+            // An error occurred.
+          }, 
+          function(position) {
+            // Active updates of the position here
+            // position.coords.[ latitude / longitude]
+        });
+
+        // clear watch
+        $cordovaGeolocation.clearWatch(watch.watchID)
+
+      });
+
+
+
+      var clientID = 'BZIF55F4JVZEFEQQOXS5332BSHSFKUNQU1RGYI3XEK0A5OJD';
+      var clientSecret = 'C2XRIUXY5CPICDODOPQUJ4EVDDLZQ0CNHLI2KHQNMKO3XTRJ';
+
+      $http({method: 'GET', url: 'https://api.foursquare.com/v2/venues/search?client_id='+clientID+'&client_secret='+clientSecret+'&v=20130815&ll=40.7,-74&query='}).
+      success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+      }).
+      error(function(data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+
+
+
   };
-   // Open the Drop Upload modal
+   // cloese drop location modal
   $scope.closeLoc = function() {
     $scope.dropLocation.hide();
   };
 
-  // Perform the login action when the user submits the login form
+  // Drop uploads from CAM icon in header (Drop Feed)
   $scope.doDropUpload = function() {
     console.log('Upload Info:', $scope.dropUploadData);
       
@@ -230,6 +283,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     });
   }
 
+  // Image Capture
   $scope.captureImage = function() {
     var options = { limit: 3 };
 
@@ -240,6 +294,8 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     });
   }
 
+
+  // Video Capture
   $scope.captureVideo = function() {
     var options = { limit: 3, duration: 15 };
 
@@ -255,7 +311,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 })
 
 ////////////////
-// Notifications
+// Notifications (Love)
 ////////////////
 
 .controller('loveCtrl', function($scope) {
