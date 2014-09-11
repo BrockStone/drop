@@ -2,7 +2,7 @@
   <ion-header-bar class="bar-dark">
     <h1 class="title">Login</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()"><i class="ion-android-close"></i></button>
+      <button class="button button-clear" ng-click="closeLogin();"><i class="ion-android-close"></i></button>
     </div>
   </ion-header-bar>
   <ion-content>
@@ -86,9 +86,6 @@
     </g>
   </g>
 </g>
-<text transform="matrix(1 0 0 1 381.8359 68.6396)" font-family="'BebasNeueBold'" font-size="139.532">MY</text>
-<text transform="matrix(1 0 0 1 384.333 134.2134)" font-family="'BebasNeueBold'" font-size="91.1296">LEFT</text>
-<text transform="matrix(1 0 0 1 383.333 215.9229)" font-family="'BebasNeueBold'" font-size="110.1306">EAR</text>
 </svg>
 
             </div>
@@ -96,7 +93,7 @@
   
 
     <!-- Sign up by Email Form -->
-    <form ng-submit="loginWithEmail()">
+    <form ng-controller="loginCtrl">
       <div class="list">
 
         <!-- Email Input -->
@@ -130,7 +127,7 @@
         <!-- Drop in with Facebook -->
          <div class="row">
             <div class="col">
-            <form ng-submit="loginWithFacebook()"><button class="button button-block button-positive" type="submit"><i class="ion-social-facebook"></i> Drop in with Facebook</button></form>
+            <button class="button button-block button-positive" ng-click="login('facebook')"><i class="ion-social-facebook"></i> Drop in with Facebook</button>
             
             <form ng-submit="loginWithTwitter()">
           <button class="button button-block button-positive" type="submit"><i class="ion-social-twitter"></i> Drop In with Twitter</button>

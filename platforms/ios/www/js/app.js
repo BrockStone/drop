@@ -50,12 +50,32 @@ angular.module('drop', ['ionic', 'drop.controllers', 'ngCordova'])
       }
     })
 
+    .state('app.crewProfile', {
+      url: "/crewProfile",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/crew_profile.html",
+          controller: 'profileCtrl'
+        }
+      }
+    })
+
     .state('app.dropUpload', {
       url: "/dropUpload",
       views: {
         'menuContent' :{
           templateUrl: "templates/drop_upload.html",
           controller: 'dropUploadCtrl'
+        }
+      }
+    })
+
+    .state('app.settings', {
+      url: "/settings",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/drop_upload.html",
+          controller: 'settingsCtrl'
         }
       }
     })

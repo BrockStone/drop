@@ -100,7 +100,7 @@
         <label class="item item-input">
 
           <span class="input-label">Email</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" ng-model="loginData.email">
         </label>
 
         <!-- Password Input -->
@@ -111,7 +111,7 @@
 
         <!-- Drop In (Submit Form to Sign up) -->
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" ng-click="$scope.auth.createUser();">Log in</button>
         </label>
 
         </form>
@@ -130,7 +130,7 @@
             <button class="button button-block button-positive" ng-click="login('facebook')"><i class="ion-social-facebook"></i> Drop in with Facebook</button>
             
             <form ng-submit="loginWithTwitter()">
-          <button class="button button-block button-positive" type="submit"><i class="ion-social-twitter"></i> Drop In with Twitter</button>
+          <button class="button button-block button-positive" ng-click="login('twitter')"><i class="ion-social-twitter"></i> Drop In with Twitter</button>
           </form>
           </div>
           </div>

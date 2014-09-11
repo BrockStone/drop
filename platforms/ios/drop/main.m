@@ -20,8 +20,8 @@
 //  main.m
 //  drop
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+//  Created by Brock Stone on 08/01/2014.
+//  Copyright Brock Stone Design 2014. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

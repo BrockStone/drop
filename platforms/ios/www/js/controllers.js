@@ -1,8 +1,9 @@
 angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
-//////////////////////
-// MAIN SLIDE OUT MENU ---> LOGIN
-//////////////////////
+//  _  _  ____  __ _  _  _       
+// ( \/ )(  __)(  ( \/ )( \      
+// / \/ \ ) _) /    /) \/ (      
+// \_)(_/(____)\_)__)\____/    
 
 .controller('menuCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $firebaseSimpleLogin) {
   
@@ -14,7 +15,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   $ionicModal.fromTemplateUrl('templates/log.html', {
     scope: $scope
   }).then(function(modal) {
-    $scope.modal = modal;
+    $scope.loginModal = modal;
   });
 
   // Create profile modal 
@@ -24,9 +25,36 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.profileModal = modal;
   });
 
+  // Create profile modal 
+  $ionicModal.fromTemplateUrl('templates/settings.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.settingsModal = modal;
+  });
+
   // Open the create profile modal and get session reference
   $scope.addProfile = function() {
     $scope.profileModal.show();
+  };
+
+   // Open login
+  $scope.openLogin = function() {
+    $scope.loginModal.show();
+  };
+
+    // Close login
+  $scope.closeLogin = function() {
+    $scope.loginModal.hide();
+  };
+
+   // Open settings
+  $scope.openSettings = function() {
+    $scope.settingsModal.show();
+  };
+
+  // Open settings
+  $scope.closeSettings = function() {
+    $scope.settingsModal.hide();
   };
 
   // Form data for profile
@@ -73,103 +101,65 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
       } 
     });
   };
-
-
-  // Form data Object for the login modal
-  $scope.loginData = {};
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-
-
-  // Facebook provider for Simple Login
-  $scope.loginWithFacebook = function() {
-      
-    $scope.authClient.$login("facebook").then(function(user) {
-   
-      console.log("Logged in as: " + user.displayName);
-
-      var isNewUser = true;
-      
-      if( isNewUser ) {
-      
-        // save new user's profile into Firebase so we can
-        // list users, use them in security rules, and show profiles
-        ref.child('users').child(user.uid).set({
-          displayName: user.displayName,
-          provider: user.provider,
-          provider_id: user.id
-        });
-        $scope.addProfile();
-      }
-    }, function(error) {
-      console.error("Login failed: " + error);
-    });
-  };
-
-  // Twitter provider for Simple Login
-  $scope.loginWithTwitter = function() {
-      
-    $scope.authClient.$login("twitter").then(function(user) {
-      
-      console.log("Logged in as: " + user.displayName);
-
-      var isNewUser = true;
-      
-      if( isNewUser ) {
-      
-        // save new user's profile into Firebase so we can
-        // list users, use them in security rules, and show profiles
-        ref.child('users').child(user.uid).set({
-          displayName: user.displayName,
-          provider: user.provider,
-          provider_id: user.id
-        });
-        $scope.addProfile();
-      }
-    }, function(error) {
-      console.error("Login failed: " + error);
-    });
-  };
-
-  // log user in using email and password
-  $scope.loginWithEmail = function(){
-   console.log($scope.loginData.username);
-    $scope.authClient.createUser($scope.loginData.username, $scope.loginData.password).then(function(user) {
-      if (user) {
-        console.log("User created successfully:", user);
-      } else {
-        console.log("Error creating user:", error);
-      }
-    });
-    
-    // $scope.authClient.$createUser($scope.loginData.username, $scope.loginData.password)
-    // .then(function(user){
-    //     // do things if success
-    //     console.log("User created successfully:", user);
-    // }, function(error){
-    //     // do things if failure
-    // }); 
-  };
-
-  
 })
 
 
+//  __     __    ___  __  __ _ 
+// (  )   /  \  / __)(  )(  ( \
+// / (_/\(  O )( (_ \ )( /    /
+// \____/ \__/  \___/(__)\_)__)
 
-////////////////////////////////////////////////////////////
-// Drops Home (Username, id, trick, feature, video, location)
-////////////////////////////////////////////////////////////
 
-.controller('dropsCtrl', function($scope, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture) {
+.controller("loginCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin) {
+    // Get a reference to the Drop Firebase
+    var firebaseRef = new Firebase('https://drop.firebaseio.com');
+
+    // Create a Firebase Simple Login object
+    $scope.auth = $firebaseSimpleLogin(firebaseRef);
+
+    // Initially set no user to be logged in
+    $scope.user = null;
+
+    // Logs a user in with inputted provider
+    $scope.login = function(provider) {
+      $scope.auth.$login(provider);
+    };
+
+    // Logs a user out
+    $scope.logout = function() {
+      $scope.auth.$logout();
+    };
+
+    // Upon successful login, set the user object
+    $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
+      $scope.user = user;
+      console.log($scope.user);
+    });
+
+    // Upon successful logout, reset the user object
+    $rootScope.$on("$firebaseSimpleLogin:logout", function(event) {
+      $scope.user = null;
+
+
+        window.cookies.clear(function() {
+          console.log("Cookies cleared!");
+        });
+
+
+    });
+
+    // Log any login-related errors to the console
+    $rootScope.$on("$firebaseSimpleLogin:error", function(event, error) {
+      console.log("Error logging user in: ", error);
+    });
+})
+
+//  ____  ____   __  ____  ____ 
+// (    \(  _ \ /  \(  _ \/ ___)
+//  ) D ( )   /(  O )) __/\___ \
+// (____/(__\_) \__/(__)  (____/
+
+.controller('dropsCtrl', function($scope, $http, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation) {
   // $scope.drops = [
   //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
   //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
@@ -186,9 +176,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
   // Form data for profile
   $scope.dropUploadData = {};
-
-
-
+ 
   // Drop Upload modal 
   $ionicModal.fromTemplateUrl('templates/drop_upload.html', {
     scope: $scope
@@ -213,17 +201,45 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.modal.hide();
   };
 
-
-  // Open the Drop Upload modal
+  // Open the Drop location modal
   $scope.getDropLocation = function() {
     $scope.dropLocation.show();
+
+    // Get location 
+    $cordovaGeolocation.getCurrentPosition()
+    .then(function (position) {
+
+            var lat  = position.coords.latitude;
+            var long = position.coords.longitude;
+            console.log('lat= '+lat);
+            console.log('long= '+long);
+            console.log(position);
+
+            // FOURSQUARE API 
+
+            var clientID = 'BZIF55F4JVZEFEQQOXS5332BSHSFKUNQU1RGYI3XEK0A5OJD';
+            var clientSecret = 'C2XRIUXY5CPICDODOPQUJ4EVDDLZQ0CNHLI2KHQNMKO3XTRJ';
+
+            $http({method: 'GET', url: 'https://api.foursquare.com/v2/venues/search?client_id='+clientID+'&client_secret='+clientSecret+'&v=20130815&ll='+lat+','+long}).
+            success(function(data, status, headers, config) {
+              console.log('Connected to Foursquare:'+data);
+            }).
+            error(function(data, status, headers, config) {
+              console.log(data);
+            });
+
+          }, function(err) {
+            // error
+        });
+
+      
   };
-   // Open the Drop Upload modal
+   // cloese drop location modal
   $scope.closeLoc = function() {
     $scope.dropLocation.hide();
   };
 
-  // Perform the login action when the user submits the login form
+  // Drop uploads from CAM icon in header (Drop Feed)
   $scope.doDropUpload = function() {
     console.log('Upload Info:', $scope.dropUploadData);
       
@@ -260,6 +276,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     });
   }
 
+  // Image Capture
   $scope.captureImage = function() {
     var options = { limit: 3 };
 
@@ -270,6 +287,8 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     });
   }
 
+
+  // Video Capture
   $scope.captureVideo = function() {
     var options = { limit: 3, duration: 15 };
 
@@ -284,9 +303,10 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
 })
 
-////////////////
-// Notifications
-////////////////
+//  __     __   _  _  ____ 
+// (  )   /  \ / )( \(  __)
+// / (_/\(  O )\ \/ / ) _) 
+// \____/ \__/  \__/ (____)
 
 .controller('loveCtrl', function($scope) {
   $scope.loves = [
@@ -297,9 +317,10 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   ];
 })
 
-////////////////
-// User Profile 
-////////////////
+//  _  _  ____  ____  ____    ____  ____   __  ____  __  __    ____ 
+// / )( \/ ___)(  __)(  _ \  (  _ \(  _ \ /  \(  __)(  )(  )  (  __)
+// ) \/ (\___ \ ) _)  )   /   ) __/ )   /(  O )) _)  )( / (_/\ ) _) 
+// \____/(____/(____)(__\_)  (__)  (__\_) \__/(__)  (__)\____/(____)
 
 .controller('profileCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for profile
