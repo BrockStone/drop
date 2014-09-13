@@ -90,6 +90,16 @@ angular.module('drop', ['ionic', 'drop.controllers', 'ngCordova'])
       }
     })
 
+    .state('app.login', {
+      url: "/login",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/log.html",
+          controller: 'loginCtrl'
+        }
+      }
+    })
+
     .state('app.single', {
       url: "/playlists/:playlistId",
       views: {

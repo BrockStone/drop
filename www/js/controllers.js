@@ -187,7 +187,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 //  ) D ( )   /(  O )) __/\___ \
 // (____/(__\_) \__/(__)  (____/
 
-.controller('dropsCtrl', function($scope, $http, $ionicModal, $timeout, $ionicActionSheet, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation) {
+.controller('dropsCtrl', function($scope, $http, $ionicModal, $timeout, $ionicActionSheet, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation, $cordovaCamera) {
   // $scope.drops = [
   //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
   //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
@@ -195,9 +195,11 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   //   // { username: 'DJ_Rel', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'}
   // ];
 
-  // FIREBASE REF
-   var ref = new Firebase('https://drop.firebaseio.com/drops');
-   var sync = $firebase(ref);
+  // FIREBASE Drops folder Reference
+  $scope.isLoading = true;
+  var dropsRef = new Firebase('https://drop.firebaseio.com/drops');
+  $scope.drops = $firebase(dropsRef);
+  var sync = $firebase(ref);
 
    // Drops ARRAY
   $scope.drops = sync.$asArray();
@@ -211,6 +213,82 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
+  // Audio Capture
+
+  // $scope.captureAudio = function() {
+  //   var options = { limit: 3, duration: 10 };
+
+  //   $cordovaCapture.captureAudio(options).then(function(audioData) {
+  //     // Success! Audio data is here
+  //   }, function(err) {
+  //     // An error occured. Show a message to the user
+  //   });
+  // }
+
+
+  // Image Capture
+
+  $scope.captureImage = function() {
+    var options = { limit: 3 };
+
+    $cordovaCapture.captureImage(options).then(function(imageData) {
+      // Success! Image data is here
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+  }
+
+
+  // Video Capture
+
+  $scope.captureVideo = function() {
+    var options = { limit: 3, duration: 15 };
+
+    $cordovaCapture.captureVideo(options).then(function(videoData) {
+      console.log(videoData);
+    }, function(err) {
+      console.log(err);
+    });
+
+    $scope.dropUpload();
+  }
+
+  // Grab video or picture from camera library
+
+  $scope.getMedia = function() {
+    var options = { 
+        quality : 75, 
+        destinationType : Camera.DestinationType.DATA_URL, 
+        sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+        allowEdit : true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 600,
+        targetHeight: 600,
+        popoverOptions: CameraPopoverOptions,
+        mediaType: Camera.MediaType.ALLMEDIA,
+        saveToPhotoAlbum: true
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+      console.log(imageData);
+      $ionicLoading.show({
+        template: 'Uploading...'
+      });
+      
+      $scope.snaps.$add({data: imageData}).
+        then(function(data) {
+          $ionicLoading.hide();
+          console.log(data);
+        });
+
+
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+    $scope.dropUpload();
+  }
+
 
   // Drop Upload Location modal 
   $ionicModal.fromTemplateUrl('templates/upload_location.html', {
@@ -250,7 +328,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
         }if(index == 1){
           $scope.captureImage();
         }else{
-          console.log('choose existing');
+          $scope.getMedia();
         }
         return true;
 
@@ -326,44 +404,6 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 
         });   
   };
-
-  
-
-  $scope.captureAudio = function() {
-    var options = { limit: 3, duration: 10 };
-
-    $cordovaCapture.captureAudio(options).then(function(audioData) {
-      // Success! Audio data is here
-    }, function(err) {
-      // An error occured. Show a message to the user
-    });
-  }
-
-  // Image Capture
-  $scope.captureImage = function() {
-    var options = { limit: 3 };
-
-    $cordovaCapture.captureImage(options).then(function(imageData) {
-      // Success! Image data is here
-    }, function(err) {
-      // An error occured. Show a message to the user
-    });
-  }
-
-
-  // Video Capture
-  $scope.captureVideo = function() {
-    var options = { limit: 3, duration: 15 };
-
-    $cordovaCapture.captureVideo(options).then(function(videoData) {
-      console.log(videoData);
-    }, function(err) {
-      console.log(err);
-    });
-  }
-
-
-
 })
 
 //  __     __   _  _  ____ 

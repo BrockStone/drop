@@ -32,10 +32,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.settingsModal = modal;
   });
 
-  // Open the create profile modal and get session reference
-  $scope.addProfile = function() {
-    $scope.profileModal.show();
-  };
+  
 
    // Open login
   $scope.openLogin = function() {
@@ -113,6 +110,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 .controller("loginCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin) {
     // Get a reference to the Drop Firebase
     var firebaseRef = new Firebase('https://drop.firebaseio.com');
+    $scope.loginData = {};
 
     // Create a Firebase Simple Login object
     $scope.auth = $firebaseSimpleLogin(firebaseRef);
@@ -125,27 +123,57 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
       $scope.auth.$login(provider);
     };
 
+     // Open login
+  $scope.openLogin = function() {
+    $scope.loginModal.show();
+  };
+
+    // Close login
+    $scope.closeLogin = function() {
+      $scope.loginModal.hide();
+    };
+
+    // Open the create profile modal and get session reference
+  $scope.addProfile = function() {
+    $scope.profileModal.show();
+  };
+
     // Logs a user out
     $scope.logout = function() {
       $scope.auth.$logout();
     };
 
+      // $scope.auth.createUser($scope.loginData.email, $scope.loginData.password, function(error, user) {
+      //   if (error === null) {
+      //     console.log("User created successfully:", user);
+      //   } else {
+      //     console.log("Error creating user:", error);
+      //   }
+      // });
+     
+
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
       $scope.user = user;
+
       console.log($scope.user);
+      
+      firebaseRef.child('users').child($scope.user.uid).set({
+            displayName: $scope.user.displayName,
+            provider: $scope.user.provider,
+            provider_id: $scope.user.id
+          });
+       $scope.closeLogin();
+
     });
 
-    // Upon successful logout, reset the user object
+    // Upon successful logout, reset the user object and clear cookies
     $rootScope.$on("$firebaseSimpleLogin:logout", function(event) {
       $scope.user = null;
 
-
-        window.cookies.clear(function() {
-          console.log("Cookies cleared!");
-        });
-
-
+      // window.cookies.clear(function() {
+      //   console.log("Cookies cleared!");
+      // });
     });
 
     // Log any login-related errors to the console
@@ -159,7 +187,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
 //  ) D ( )   /(  O )) __/\___ \
 // (____/(__\_) \__/(__)  (____/
 
-.controller('dropsCtrl', function($scope, $http, $ionicModal, $timeout, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation) {
+.controller('dropsCtrl', function($scope, $http, $ionicModal, $timeout, $ionicActionSheet, $ionicLoading, $firebase, $cordovaCapture, $cordovaGeolocation, $cordovaCamera) {
   // $scope.drops = [
   //   // { username: 'Brock_Stone', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
   //   // { username: 'JeffSmail', id: 1 , trick_ex: '540, Method', park_feature: '25ft Booter', location: '7 Springs Resort - Champion, Pa', vid_url: 'vids/openingwkend.mp4'},
@@ -199,6 +227,41 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   // Close Drop Upload
   $scope.closeDropUpload = function() {
     $scope.modal.hide();
+  };
+
+  // Show Drop upload options (take viseo, take picture, choose existing)
+  $scope.showUploadOptions = function() {
+
+   // Show the action sheet
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: 'Take Video' },
+       { text: 'Take Picture' },
+       { text: 'Choose Existing' }
+     ],
+     titleText: 'Upload a Drop',
+     cancelText: 'Cancel',
+     cancel: function() {
+          // add cancel code..
+        },
+     buttonClicked: function(index) {
+        if (index == 0) {
+          $scope.captureVideo();
+        }if(index == 1){
+          $scope.captureImage();
+        }else{
+          $scope.getMedia();
+        }
+        return true;
+
+     }
+   });
+
+   // For example's sake, hide the sheet after two seconds
+   $timeout(function() {
+     hideSheet();
+   }, 2000);
+
   };
 
   // Open the Drop location modal
@@ -297,10 +360,35 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     }, function(err) {
       console.log(err);
     });
+
+    $scope.dropUpload();
   }
 
+  // Grab video or picture from camera library
+  $scope.getMedia = function() {
+    var options = { 
+        quality : 49, 
+        destinationType : Camera.DestinationType.FILE_URI, 
+        sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+        // allowEdit : true,
+        // encodingType: Camera.EncodingType.JPEG,
+        // targetWidth: 100,
+        // targetHeight: 100,
+        // popoverOptions: CameraPopoverOptions,
+        mediaType: Camera.MediaType.ALLMEDIA,
+        saveToPhotoAlbum: true
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+      console.log(imageData);
+      // $scope.drop_vid_url = imageData;
 
 
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+    $scope.dropUpload();
+  }
 })
 
 //  __     __   _  _  ____ 
