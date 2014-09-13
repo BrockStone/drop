@@ -199,7 +199,7 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
   $scope.isLoading = true;
   var dropsRef = new Firebase('https://drop.firebaseio.com/drops');
   $scope.drops = $firebase(dropsRef);
-  var sync = $firebase(ref);
+  var sync = $firebase(dropsRef);
 
    // Drops ARRAY
   $scope.drops = sync.$asArray();
