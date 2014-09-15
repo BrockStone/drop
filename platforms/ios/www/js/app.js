@@ -6,6 +6,8 @@
 // 'drop.controllers' are found in controllers.js
 angular.module('drop', ['ionic', 'drop.controllers', 'ngCordova'])
 
+.constant('FirebaseUrl', "https://snap-ruby-db.firebaseio.com")
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
