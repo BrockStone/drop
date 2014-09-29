@@ -31,7 +31,7 @@
   <!-- Drop Feed -->
   <ion-content id="home" class="has-header">
     
-    <div class="list card dropcard" ng-repeat="drop in drops">
+    <div class="list card dropcard">
     <!-- Drop username & location -->
       <div class="item item-avatar" >
         <img src="">
@@ -41,8 +41,8 @@
       </div>
 
       <!-- Drop video, trick, feature, likes -->
-       <video class="full-image" controls width="100%">
-        <source src="{{drop.vid_url}}" type='video/mov' />
+       <video class="full-image" width="100%" webkit-playsinline autoplay="autoplay">
+        <source src="vids/openingwkend.mp4" type='video/mp4' />
       </video>
       
       <div id="trick">
@@ -55,7 +55,7 @@
               <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
               <h4>BS GRIND ON DOWN LEDGE</h4>
               <h4 id="trick_show">7 SPRINGS</h4>
-              <h4><a href="#"> <i class="icon ion-thumbsup"></i> 19 RIDERS THINK THIS IS RAD</a></h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i>{{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
             </p>
           </div>
         </div>
@@ -68,9 +68,9 @@
               <i class="icon ion-thumbsup"></i>
               Rad
             </a> -->
-           <a id="rad_btn" href="#">RAD</a>
+           <a id="rad_btn" href="" ng-click="raded();">RAD</a>
 
-           <a id="comment_btn" href="#">COMMENT</a>
+           <a id="comment_btn" href="" ng-click="openComments();">COMMENT</a>
      
             
             <!-- <a class="tab-item" href="#">
@@ -83,5 +83,50 @@
     </div><!--  / list card -->
   </ion-content>
 </ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+It is an honor to be standing here today. However I would be in this position without the guidance support and motivation from my family, friends, professors and classmates. Throughout my student career here at Full Sail University I have not only been well versed in many web languages but have also gained abilities I never knew I'd achieve. I would like to share an experience with you -
+
+One day our Professor came into class and said "Make an App".
+ We all turned and looked at each other, he then said that we had four hours to complete this assignment. We were put into teams of three and immedietly got to work. The fact that the instructions were so minimal.. make an app, we were puzzled on where to start. Before you knew it though we had an idea, and knew how we were going to accomplish the task. During lunch break we didnt even eat, we didnt want to, we wanted to finish our app. All in all we finished in time and presented it to the class. They loved what we had created, including our professor. This exersise really got my gears turning. It Truly showed us our full potential, and the benefits of proper teamwork. From there on out I knew I was in the right field of study. 
+
+ I would like express my gratitude to all faculty of the Web Design And Development Department. It has truly been an amazing adventure these past two years. And to my classmate Paul, thank you for all the support throughout the degree.
+
+ Congratualtion class of fall 2014! 
+
+ go out there and show them what being a full sailor is all about!
+
+ Thank you. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -214,6 +214,50 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $scope.modal = modal;
   });
 
+  // Drop Comment Modal
+  $ionicModal.fromTemplateUrl('templates/comments.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.commentModal = modal;
+  });
+
+  // Open comments
+  $scope.openComments = function() {
+    $scope.commentModal.show();
+  };
+
+  // Open comments
+  $scope.closeComments = function() {
+    $scope.commentModal.hide();
+  };
+
+  // Comments
+  $scope.comments = [
+    { username: 'Brock_Stone', comment: 'Awesome! Nice Drop.'},
+    { username: 'JeffSmail', comment: 'Where is this?'},
+    { username: 'Skip', comment: 'Pretty cool man.'},
+    { username: 'DJ_Rel', comment: 'Your a good rider!'}
+  ];
+
+
+  $scope.rad_count = 10;
+
+  // RAD
+  $scope.raded = function() {
+    console.log('hola');
+    $ionicLoading.show({
+      template: 'RAD!'
+    });
+    
+    $scope.rad_count++;
+
+    $timeout(function() {
+      $ionicLoading.hide();
+    }, 1000);
+
+  };
+
+
   // Show Drop upload options (take viseo, take picture, choose existing)
   $scope.showUploadOptions = function() {
 
@@ -283,10 +327,46 @@ angular.module('drop.controllers', ['firebase', 'ngCordova'])
     $cordovaCapture.captureVideo(options).then(function(videoData) {
       console.log(videoData[0].localURL);
 
-      dropsRef.push({url: videoData[0].localURL}).
-        then(function(data) {
-          console.log("pushed!");
-        });
+
+      // Write permissions and create folder 
+
+      function download(URL, Folder_Name, File_Name) {
+        //step to request a file system 
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
+
+        function fileSystemSuccess(fileSystem) {
+            var download_link = encodeURI(URL);
+            ext = download_link.substr(download_link.lastIndexOf('.') + 1); //Get extension of URL
+
+            var directoryEntry = fileSystem.root; // to get root path of directory
+            directoryEntry.getDirectory(Folder_Name, { create: true, exclusive: false }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
+            var rootdir = fileSystem.root;
+            var fp = rootdir.fullPath; // Returns Fulpath of local directory
+
+            fp = fp + "/" + Folder_Name + "/" + File_Name + "." + ext; // fullpath and name of the file which we want to give
+            // download function call
+            filetransfer(download_link, fp);
+        }
+
+        function onDirectorySuccess(parent) {
+            console.log('Directory created!')
+        }
+
+        function onDirectoryFail(error) {
+            //Error while creating directory
+            console.log("Unable to create new directory: " + error.code);
+        }
+
+          function fileSystemFail(evt) {
+            //Unable to access file system
+            console.log(evt.target.error.code);
+         }
+        }
+
+      // dropsRef.push({url: videoData[0].localURL}).
+      //   then(function(data) {
+      //     console.log("pushed!");
+      //   });
 
       
 

@@ -31,7 +31,7 @@
   <!-- Drop Feed -->
   <ion-content id="home" class="has-header">
     
-    <div class="list card dropcard" ng-repeat="drop in drops">
+    <div class="list card dropcard">
     <!-- Drop username & location -->
       <div class="item item-avatar" >
         <img src="">
@@ -41,8 +41,8 @@
       </div>
 
       <!-- Drop video, trick, feature, likes -->
-       <video class="full-image" controls width="100%">
-        <source src="{{drop.vid_url}}" type='video/mp4' />
+       <video class="full-image" width="100%" controls webkit-playsinline>
+        <source src="vids/openingwkend.mp4" type='video/mp4' />
       </video>
       
       <div id="trick">
@@ -55,7 +55,7 @@
               <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
               <h4>BS GRIND ON DOWN LEDGE</h4>
               <h4 id="trick_show">7 SPRINGS</h4>
-              <h4><a href="#"> <i class="icon ion-thumbsup"></i> 19 RIDERS THINK THIS IS RAD</a></h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i>{{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
             </p>
           </div>
         </div>
@@ -68,9 +68,9 @@
               <i class="icon ion-thumbsup"></i>
               Rad
             </a> -->
-           <a id="rad_btn" href="#">RAD</a>
+           <a id="rad_btn" href="" ng-click="raded();">RAD</a>
 
-           <a id="comment_btn" href="#">COMMENT</a>
+           <a id="comment_btn" href="" ng-click="openComments();">COMMENT</a>
      
             
             <!-- <a class="tab-item" href="#">

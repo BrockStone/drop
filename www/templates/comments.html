@@ -1,0 +1,38 @@
+<div class="modal">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">Add Comment</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeComments();"><i class="ion-android-close"></i></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  		<div class="list">
+
+		  <div class="item item-input-inset">
+		    <label class="item-input-wrapper">
+		      <input type="text" ng-model="comments.comment"placeholder="Your Comment">
+		    </label>
+		    <button class="button button-small button-positive">
+		      Submit
+		    </button>
+		  </div>
+
+		</div>
+		<h4 style="margin-left:10px; color:#0086E4;">Recent Comments</h4>
+		<div class="list">
+		<a class="item" href="">
+		<h2>Brock_Stone</h2>			
+	      <p>{{comments.comment}}</p>
+		</a>
+
+    	<!-- Link to the drop that got some love (Username and Drop Liked) -->
+	    <a class="item" href="#" ng-repeat="comment in comments">
+	      <h2>{{comment.username}}</h2>
+	      <p>{{comment.comment}}</p>
+	    </a>
+
+	</div>
+    
+  </ion-content>
+</div> <!-- / modal -->
+

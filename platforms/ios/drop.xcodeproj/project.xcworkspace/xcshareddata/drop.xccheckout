@@ -10,29 +10,29 @@
 	<string>drop</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2BD56AE7-C4EB-4EA5-B173-71B4F1C6BB75</key>
+		<key>140D695B086E99572404F67955152C01367F242D</key>
 		<string>ssh://github.com/BrockStone/drop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>platforms/ios/drop.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2BD56AE7-C4EB-4EA5-B173-71B4F1C6BB75</key>
+		<key>140D695B086E99572404F67955152C01367F242D</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/BrockStone/drop.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2BD56AE7-C4EB-4EA5-B173-71B4F1C6BB75</string>
+	<string>140D695B086E99572404F67955152C01367F242D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2BD56AE7-C4EB-4EA5-B173-71B4F1C6BB75</string>
+			<string>140D695B086E99572404F67955152C01367F242D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>drop</string>
 		</dict>
