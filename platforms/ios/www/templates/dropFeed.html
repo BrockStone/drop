@@ -34,14 +34,15 @@
     <div class="list card dropcard">
     <!-- Drop username & location -->
       <div class="item item-avatar" >
-        <img src="">
+        <img src="img/brock.png">
         <!-- <h2>{{drop.username}}</h2> -->
         <h4>Brock Stone</h4>
         <h4>Uploaded a Drop</h4>
+        <h4 style="padding-left:170px; margin-top: -25px;">5m ago</h4>
       </div>
 
       <!-- Drop video, trick, feature, likes -->
-       <video class="full-image" width="100%" controls webkit-playsinline>
+       <video class="full-image" width="100%" webkit-playsinline autoplay="autoplay">
         <source src="vids/openingwkend.mp4" type='video/mp4' />
       </video>
       
@@ -54,8 +55,118 @@
             <p>
               <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
               <h4>BS GRIND ON DOWN LEDGE</h4>
-              <h4 id="trick_show">7 SPRINGS</h4>
-              <h4><a href="#"> <i class="icon ion-thumbsup"></i>{{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
+              <h4 id="trick_show"><i class="icon ion-location"></i> 7 SPRINGS</h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i> {{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
+              <h4><a href="#"> <i class="icon ion-chatbox"></i> 8 COMMENTS ON THIS DROP</a></h4>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rad tabs ( Like, Share ) -->
+      <div class="row" id="rad_tabs">
+        <div class="col">
+           <!-- <a class="tab-item" href="#">
+              <i class="icon ion-thumbsup"></i>
+              Rad
+            </a> -->
+           <a id="rad_btn" href="" ng-click="raded();">RAD</a>
+
+           <a id="comment_btn" href="" ng-click="openComments();">COMMENT</a>
+     
+            
+            <!-- <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a> -->
+        </div>
+      </div>
+
+    </div><!--  / list card -->
+
+
+    <div class="list card dropcard">
+    <!-- Drop username & location -->
+      <div class="item item-avatar" >
+        <img src="img/brock.png">
+        <!-- <h2>{{drop.username}}</h2> -->
+        <h4>Brock Stone</h4>
+        <h4>Uploaded a Drop</h4>
+        <h4 style="padding-left:170px; margin-top: -25px;">5m ago</h4>
+      </div>
+
+      <!-- Drop video, trick, feature, likes -->
+       <video class="full-image" width="100%" webkit-playsinline autoplay="autoplay">
+        <source src="vids/openingwkend.mp4" type='video/mp4' />
+      </video>
+      
+      <div id="trick">
+        
+
+
+        <div class="row">
+          <div class="col">
+            <p>
+              <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
+              <h4>BS GRIND ON DOWN LEDGE</h4>
+              <h4 id="trick_show"><i class="icon ion-location"></i> 7 SPRINGS</h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i> {{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
+              <h4><a href="#"> <i class="icon ion-chatbox"></i> 8 COMMENTS ON THIS DROP</a></h4>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rad tabs ( Like, Share ) -->
+      <div class="row" id="rad_tabs">
+        <div class="col">
+           <!-- <a class="tab-item" href="#">
+              <i class="icon ion-thumbsup"></i>
+              Rad
+            </a> -->
+           <a id="rad_btn" href="" ng-click="raded();">RAD</a>
+
+           <a id="comment_btn" href="" ng-click="openComments();">COMMENT</a>
+     
+            
+            <!-- <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a> -->
+        </div>
+      </div>
+
+    </div><!--  / list card -->
+
+
+
+    <div class="list card dropcard">
+    <!-- Drop username & location -->
+      <div class="item item-avatar" >
+        <img src="img/brock.png">
+        <!-- <h2>{{drop.username}}</h2> -->
+        <h4>Brock Stone</h4>
+        <h4>Uploaded a Drop</h4>
+        <h4 style="padding-left:170px; margin-top: -25px;">5m ago</h4>
+      </div>
+
+      <!-- Drop video, trick, feature, likes -->
+       <video class="full-image" width="100%" webkit-playsinline autoplay="autoplay">
+        <source src="vids/openingwkend.mp4" type='video/mp4' />
+      </video>
+      
+      <div id="trick">
+        
+
+
+        <div class="row">
+          <div class="col">
+            <p>
+              <!-- <p>{{drop.trick_ex}} on {{drop.park_feature}}</p> -->
+              <h4>BS GRIND ON DOWN LEDGE</h4>
+              <h4 id="trick_show"><i class="icon ion-location"></i> 7 SPRINGS</h4>
+              <h4><a href="#"> <i class="icon ion-thumbsup"></i> {{rad_count}} RIDERS THINK THIS IS RAD</a></h4>
+              <h4><a href="#"> <i class="icon ion-chatbox"></i> 8 COMMENTS ON THIS DROP</a></h4>
             </p>
           </div>
         </div>
@@ -83,5 +194,3 @@
     </div><!--  / list card -->
   </ion-content>
 </ion-view>
-
-

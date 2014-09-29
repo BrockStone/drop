@@ -1,6 +1,6 @@
 /*GLOBAL*/
 p{
-	font-size: 11px;
+	font-size: 13px;
 }
 
 .scroll-content{
@@ -95,7 +95,7 @@ div.row.count{
 	padding-bottom: 25px;
 }
 .count h4{
-	font-size: 12px;
+	font-size: 19px;
 
 }
 .count p{
@@ -106,7 +106,7 @@ div.row.count{
 }
 
 #bio{
-	font-size: 11px;
+	font-size: 12px;
 
 }
 #profile_postr{
@@ -135,22 +135,24 @@ textarea{
 }
 
 #rad_btn{
-	padding: 8px 25px;
+	padding: 8px 55px;
 	background-color: #0BA5EC;
 	color: #232323;
 	font-size: 11px;
+	border: 1px solid #0BA5EC;
 	text-decoration: none;
 }
 
 #comment_btn{
-	padding: 8px 25px;
+	padding: 8px 40px;
 	color: #0BA5EC;
 	font-size: 11px;
 	text-decoration: none;
+	border: 1px solid #0BA5EC;
 }
 
 #trick h4{
-	font-size: 11px;
+	font-size: 12px;
 }
 #vid_type{
 	margin-top: -5px

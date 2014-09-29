@@ -3904,7 +3904,9 @@ a.item-content {
   .item-icon-left .icon:before, .item-icon-right .icon:before {
     display: block;
     width: 32px;
-    text-align: center; }
+    text-align: center; 
+	color: #219FE7;
+	}
 
 .item .fill-icon {
   min-width: 30px;
